@@ -5,3 +5,12 @@ export function arraytest(arr) {
     }
     return arr;
 }
+
+
+function zamikanie() {
+    let a = 0;
+    function inner() {
+        a += 1;
+        console.log(a);
+    }
+}
