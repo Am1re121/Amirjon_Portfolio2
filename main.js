@@ -9,8 +9,10 @@ app.get("/about",(req,res)=>{
 })
 
 app.get("/contacts",(req,res)=>{
-    res.send("<h1></h1>")
+    res.send("<ul><li>Name: Alex</li><li>Phone number: +998901234567</li> <li> Name: Tom</li> <li>Phone number:+992 918445567</li></ul>")
 })
-app.listen(3000,()=>{
-    console.log("Server is running:3000")
+app.listen(8080,()=>{
+    console.log("Server is running:8080")
 })
+
+
