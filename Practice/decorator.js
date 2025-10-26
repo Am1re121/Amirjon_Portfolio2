@@ -1,5 +1,3 @@
-const { text } = require("express")
-
 function sum() {
     let i=0
     let counter=0
@@ -25,7 +23,8 @@ console.log(decsun(1,2,3,4,5))
 
 function DecoratorPractice(fn) {
     return function(txt) {
-        console.log("decorator cool")
+        txt = "cool"
+        console.log(txt)
         return fn(txt)
     }
 }
