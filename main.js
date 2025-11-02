@@ -1,16 +1,33 @@
 const express = require('express')
 const app = express()
 
-app.get("/",(req,res)=>{
-    res.send("<h1>Hello World!</h1>")
-})
-app.get("/about",(req,res)=>{
-    res.send("<h1>My name  is Amirjon, i am 14</h1>")
+let cotegory = [
+    {category: "Новостройки"},
+    {category: "Недвижимость"},
+    {category: "Недвижимость"},
+    {category: "Транспорт"},
+    {category: "Вакансии"},
+    {category: "Телефоны и связь"},
+    {category: "Детский мир"},
+    {category: "Одежда и личные вещи"},
+    {category: "Компьютеры и оргтехника"},
+    {category: "Электроника и бытовая техника"},
+    {category: "Всё для дома"},
+    {category: "Строительство, сырье и ремонт"},
+    {category: "Хобби, музыка и спорт"},
+    {category: "Животные и растения"},
+    {category: "Услуги"},
+    {category: "Для бизнеса"}
+    {category: "Отдам даром"}    
+]
+
+
+app.get("/cotegory/:category",(req,res)=>{
+    let result = cotegory.filter(cotegory => cotegory.category.toLowerCase() === req.params.category.toLowerCase())
+    res.send(result)
 })
 
-app.get("/contacts",(req,res)=>{
-    res.send("<ul><li>Name: Alex</li><li>Phone number: +998901234567</li> <li> Name: Tom</li> <li>Phone number:+992 918445567</li></ul>")
-})
+
 app.listen(8080,()=>{
     console.log("Server is running:8080")
 })
