@@ -11,7 +11,78 @@
             background-color: black;
         }
     </style>
-
+    
     <div style="position: absolute; background:grey; height: 600px; width: 1510px; border-radius: 30px;"></div>
+    <div id="micro" style="position: absolute; background:wheat; height: 60px; width: 60px; border-radius: 10px; left: 510px; top: 620px;" ></div>
+    <img src="microphone.png" alt="" style="position: absolute; height: 40px; width: 35px; left: 522px; top: 627px; cursor: pointer;" onclick="offonmicro()">
+    <h1 id="onoff" style="position: absolute; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:none; font-size: 30px; left: 550px; top: 550px;"></h1>
+    <h1 style="position: absolute; font-size: 60px; left: 550px; top: 200px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Пока никого нет</h1>
+    <div id="camera" style="position: absolute; background:wheat; height: 60px; width: 60px; border-radius: 10px; left: 600px; top: 620px;"></div>
+    <img src="camera.png" alt="" style="position: absolute; height: 40px; width: 40px; left: 612px; top: 627px; cursor: pointer;" onclick="camer()">
+    <div id="handbox" style="position: absolute; background: wheat; height: 60px; width: 60px; border-radius: 10px; left: 690px; top: 620px;"></div>
+    <img src="hand.png" alt="" id="hand" style="position: absolute; height: 50px; width: 50px; left: 695px; top: 625px; cursor: pointer;" onclick="handonoff()">
+    
+    <div style="position: absolute; background: red; height: 60px; width: 90px; left: 800px; top: 620px; border-radius: 30px;"></div>
+    <img src="telephone.png" alt="Закончить встречу" title="Закончить встречу" style="position: absolute; height: 40px; width: 40px; left: 823px; top: 628px; cursor: pointer;" onclick="onoff()">
+    <h1 title="Жалкая пародия на Google meet" style="position: absolute; font-size: 40px; color: azure; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; left: 50px; top: 600px;">Google Meet</h1>
+    <script>
+    function onoff() {
+        window.location.href = "end.html" 
+    }
+
+
+    function handonoff() {
+        let handbox = document.getElementById("handbox")
+        let han = document.getElementById("hand")
+        let on = document.getElementById("onoff")
+        if (handbox.style.background == "wheat") {
+            handbox.style.background = "#696969"
+            on.style.display = "block"
+            on.innerText = "Рука поднята"
+            setTimeout(() => {
+                on.style.display = "none"
+            }, 1000);
+        }else{
+            handbox.style.background = "wheat"
+            on.style.display = "block"
+            on.innerText = "Рука опущена"
+            setTimeout(() => {
+                on.style.display = "none"
+            }, 1000);
+        }
+    }
+    
+
+
+    function camer() {
+        let on = document.getElementById("onoff")
+        on.style.display = "block"
+        on.innerText = "Камера пока в разработке"
+        setTimeout(() => {
+            on.style.display = "none"
+        }, 1000);
+    }
+
+        function offonmicro() {
+            let mic = document.getElementById("micro")
+            if (mic.style.background == "wheat") {
+                mic.style.background = "#696969"
+                let on = document.getElementById("onoff")
+                on.style.display = "block"
+                on.innerText = "Микрофон включен"
+                setTimeout(() => {
+                    on.style.display = "none"
+                }, 1000);
+            }else{
+                mic.style.background = "wheat"
+                let on = document.getElementById("onoff")
+                on.style.display = "block"
+                on.innerText = "Микрофон выключен"
+                setTimeout(() => {
+                    on.style.display = "none"
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 </html>

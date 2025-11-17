@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet</title>
+</head>
+<body>
+    <h1 style="position:absolute; font-size: 40px; left: 550px; top: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Вы покинули встречу</h1>
+    <div style="position: absolute; background: blue; height: 40px; width: 200px; border-radius: 40px; left: 500px; top: 150px;"></div>
+    <h1 style="position: absolute; font-size: 20px; left: 510px; top: 145px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white; cursor: pointer;" onclick="back()">Вернуться к встрече</h1>
+    <div style="position: absolute; background: white; height: 40px; width: 100px; border-radius: 40px; left: 800px; top: 150px; border: 2px solid black;"></div>
+    <h1  style="position: absolute; font-size: 20px; color: blue; left: 815px; top: 145px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; cursor: pointer;" onclick="end()">Закрыть</h1>
+
+    <script>
+        function back() {
+            window.location.href = "index.html"
+        }
+        function end() {
+            window.location.href = "https://google.com"
+        }
+    </script>
+</body>
+</html>
