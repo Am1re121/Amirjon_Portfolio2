@@ -22,6 +22,14 @@
 
     <div style="position: absolute; width: 200px; height: 200px; background-color:blue; border-radius: 10px; border: 4px solid black; top: 200px; left: 700px;"><img src="parrot.png" alt="" style="position: absolute; height: 200px; " onclick="soundparrot()"></div>
     <audio src="parrotsound.mp3" id="parrot"></audio>
+
+    <div style="position: absolute; width: 200px; height: 200px; background-color:darkorange; border-radius: 10px; border: 4px solid black; top: 200px; left: 1000px;"><img src="hamster.png" alt="" style="position: absolute; height: 200px; " onclick="soundhamster()"></div>
+    <audio src="hamstersound.mp3" id="hamster"></audio>
+
+    <div style="position: absolute; width: 200px; height: 200px; background-color:darkgray; border-radius: 10px; border: 4px solid black; top: 200px; left: 1300px;"><img src="elephant.png" alt="" style="position: absolute; height: 200px; " onclick="soundelephant()"></div>
+    <audio src="elephantsound.mp3" id="elephant"></audio>
+
+    <a href="alphabet.html" style="position: absolute; font-size: 30px; top: 50px; left: 1300px;">Alphabet --></a>
     <script>
         function sounddog() {
             let dogtxt = document.getElementById("namean")
@@ -51,6 +59,26 @@
                 parrottxt.style.display = "none"
             }, 1000);
             document.getElementById("parrot").play();
+        }
+
+        function soundhamster() {
+            let hamstertxt = document.getElementById("namean")
+            hamstertxt.style.display = "block"
+            hamstertxt.innerText = "Hamster"
+            setTimeout(() => {
+                hamstertxt.style.display = "none"
+            }, 1000);
+            document.getElementById("hamster").play();
+        }
+
+        function soundelephant() {
+            let elephanttxt = document.getElementById("namean")
+            elephanttxt.style.display = "block"
+            elephanttxt.innerText = "Elephant"
+            setTimeout(() => {
+                elephanttxt.style.display = "none"
+            }, 1000);
+            document.getElementById("elephant").play();
         }
     </script>
 </body>
