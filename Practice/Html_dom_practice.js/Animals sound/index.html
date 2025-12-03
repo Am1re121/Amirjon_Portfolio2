@@ -14,19 +14,20 @@
 
     <h1 style="position: absolute; font-size: 80px; left: 620px; top: 1px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Animals</h1>
     <h1 id="namean" style="position: absolute; font-size: 70px; top: 500px; left: 650px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display: none;">Name Animals</h1>
-    <div style="position: absolute; width: 200px; height: 200px; background-color: chocolate; border-radius: 10px; border: 4px solid black; top: 200px; left: 100px;"><img src="dog.png" alt="" style="position: absolute; height: 200px; " onclick="sounddog()"></div>
+
+    <div id="doggo" style="position: absolute; width: 300px; height: 300px; background-color: chocolate; border-radius: 10px; border: 4px solid black; top: 200px; left: 650px;"><img src="dog.png" alt="" style="position: absolute; height: 300px; " onclick="sounddog()"></div>
     <audio src="dogsound.mp3" id="dog"></audio>
 
-    <div style="position: absolute; width: 200px; height: 200px; background-color: gray; border-radius: 10px; border: 4px solid black; top: 200px; left: 400px;"><img src="cat.png" alt="" style="position: absolute; height: 200px; " onclick="soundcat()"></div>
+    <div id="catgo" style="position: absolute; width: 300px; height: 300px; background-color: gray; border-radius: 10px; border: 4px solid black; top: 200px; left: 1200px;"><img src="cat.png" alt="" style="position: absolute; height: 300px; " onclick="soundcat()"></div>
     <audio src="catsound.mp3" id="cat"></audio>
 
-    <div style="position: absolute; width: 200px; height: 200px; background-color:blue; border-radius: 10px; border: 4px solid black; top: 200px; left: 700px;"><img src="parrot.png" alt="" style="position: absolute; height: 200px; " onclick="soundparrot()"></div>
+    <div id="parrotgo" style="position: absolute; width: 300px; height: 300px; background-color:blue; border-radius: 10px; border: 4px solid black; top: 200px; left: 1200px;"><img src="parrot.png" alt="" style="position: absolute; height: 300px; " onclick="soundparrot()"></div>
     <audio src="parrotsound.mp3" id="parrot"></audio>
 
-    <div style="position: absolute; width: 200px; height: 200px; background-color:darkorange; border-radius: 10px; border: 4px solid black; top: 200px; left: 1000px;"><img src="hamster.png" alt="" style="position: absolute; height: 200px; " onclick="soundhamster()"></div>
+    <div id="hamstergo" style="position: absolute; width: 300px; height: 300px; background-color:darkorange; border-radius: 10px; border: 4px solid black; top: 200px; left: 1200px;"><img src="hamster.png" alt="" style="position: absolute; height: 300px; " onclick="soundhamster()"></div>
     <audio src="hamstersound.mp3" id="hamster"></audio>
 
-    <div style="position: absolute; width: 200px; height: 200px; background-color:darkgray; border-radius: 10px; border: 4px solid black; top: 200px; left: 1300px;"><img src="elephant.png" alt="" style="position: absolute; height: 200px; " onclick="soundelephant()"></div>
+    <div id="elephantgo" style="position: absolute; width: 300px; height: 300px; background-color:darkgray; border-radius: 10px; border: 4px solid black; top: 200px; left: 1200px;"><img src="elephant.png" alt="" style="position: absolute; height: 300px; " onclick="soundelephant()"></div>
     <audio src="elephantsound.mp3" id="elephant"></audio>
 
     <a href="alphabet.html" style="position: absolute; font-size: 30px; top: 50px; left: 1300px;">Alphabet --></a>
@@ -39,6 +40,16 @@
                 dogtxt.style.display = "none"
             }, 1000);
             document.getElementById("dog").play();
+            let dog = document.getElementById("doggo");
+            dog.style.transition = "0.5s";
+            dog.style.transform = "translateX(-650px)";
+            if (dog.style.transform == "translateX(-650px)") {
+                let cat = document.getElementById("catgo");
+                cat.style.transition = "0.5s";
+                cat.style.transform = "translateX(-650px)";
+            }
+            
+
         }
 
         function soundcat() {
@@ -49,6 +60,15 @@
                 cattxt.style.display = "none"
             }, 1000);
             document.getElementById("cat").play();
+            let cat = document.getElementById("catgo");
+            cat.style.transition = "0.5s";
+            cat.style.transform = "translateX(-1200px)";
+            if (cat.style.transform == "translateX(-1200px)") {
+                let parrot = document.getElementById("parrotgo");
+                parrot.style.transition = "0.5s";
+                parrot.style.transform = "translateX(-650px)";
+            }
+
         }
 
         function soundparrot() {
@@ -59,6 +79,14 @@
                 parrottxt.style.display = "none"
             }, 1000);
             document.getElementById("parrot").play();
+            let parrot = document.getElementById("parrotgo");
+            parrot.style.transition = "0.5s";
+            parrot.style.transform = "translateX(-1200px)";
+            if (parrot.style.transform == "translateX(-1200px)") {
+                let hamster = document.getElementById("hamstergo");
+                hamster.style.transition = "0.5s";
+                hamster.style.transform = "translateX(-650px)";
+            }
         }
 
         function soundhamster() {
@@ -69,6 +97,15 @@
                 hamstertxt.style.display = "none"
             }, 1000);
             document.getElementById("hamster").play();
+            let hamster = document.getElementById("hamstergo")
+            hamster.style.transition = "0.5s";  
+            hamster.style.transform = "translateX(-1200px)";
+            if (hamster.style.transform == "translateX(-1200px)") {
+                let elephant = document.getElementById("elephantgo");
+                elephant.style.transition = "0.5s";
+                elephant.style.transform = "translateX(-650px)";
+            }
+            
         }
 
         function soundelephant() {
@@ -79,6 +116,9 @@
                 elephanttxt.style.display = "none"
             }, 1000);
             document.getElementById("elephant").play();
+            let elephant = document.getElementById("elephantgo")
+            elephant.style.transition = "0.5s";
+            elephant.style.transform = "translateX(-1200px)";
         }
     </script>
 </body>

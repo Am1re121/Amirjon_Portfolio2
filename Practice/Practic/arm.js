@@ -1,14 +1,16 @@
 function isArmstrongNumber(numbers) {
-    let num = numbers.toString();
+    let num = numbers.toString().length
+    let digits = numbers.toString().split('')
     let sum = 0;
-    let order = num.length;
-    for (let i = 0; i < order; i++) {
-        sum **= num[i];
-        if (sum === numbers) {
-            console.log(`${numbers} is an Armstrong number`);
-            return true;
-        }
-}
+    
+    digits.forEach(el => {
+        sum += el**num;
+    });
+    if (sum === numbers) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-isArmstrongNumber(153);
+console.log(isArmstrongNumber(153)); 
