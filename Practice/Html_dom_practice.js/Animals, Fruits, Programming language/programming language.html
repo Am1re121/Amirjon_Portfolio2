@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgreen;
+    }
+
+    .slide{
+        display: none;
+        height: 300px;
+        width: 500px;
+        position: relative;
+        top: 100px;
+        left: 500px;
+        border-radius: 10px;
+        box-shadow: gray 2px 7px 15px;
+    }
+    .active{
+        display: block;
+    }
+
+    #next, #back{
+        position: relative;
+        top: 120px;
+        left: 650px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+
+    #js{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #python{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #php{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #c{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;    
+    }
+
+    #main{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="slider">
+        <div class="slide active"><img src="photos/python.png" id="python" alt="" onclick="pythonstart()"></div>
+        <div class="slide"><img id="js" src="photos/javascript.png" alt="" onclick="javascriptstart()"></div>
+        <div class="slide"><img src="photos/php.png" id="php" alt="" onclick="phpstart()"></div>
+        <div class="slide"><img src="photos/c++.png" id="c" alt="" onclick="cstart()"></div>
+        
+
+        <button id="back" onclick="backSlide()">back</button>
+        <button id="next" onclick="nextSlide()">next</button>
+
+        <audio id="pythonau" src="sounds/pythons.mp3"></audio>
+        <audio id="javascriptau" src="sounds/javascripts.mp3"></audio>
+        <audio id="phpau" src="sounds/php.mp3"></audio>
+        <audio id="csau" src="sounds/cs.mp3"></audio>
+    </div>
+    <button id="main">Back</button>
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let i = 0;
+
+    function nextSlide() {
+    slides[i].classList.remove('active');
+    i++;
+    if (i === slides.length) {
+        i = 0;
+    }
+    slides[i].classList.add('active');
+}
+
+function backSlide() {
+    slides[i].classList.remove('active');
+    i--;
+    if (i < 0) {
+        i = slides.length - 1;
+    }
+    slides[i].classList.add('active');
+}
+
+function pythonstart(){
+    document.getElementById('pythonau').play();
+}
+
+function javascriptstart(){
+    document.getElementById('javascriptau').play();
+}
+
+function phpstart(){
+    document.getElementById('phpau').play();
+}
+
+function cstart(){
+    document.getElementById('csau').play();
+}
+
+document.getElementById('main').onclick = function(){
+    window.location.href = "main.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide{
+            display: none;
+            height: 250px;
+            border-radius: 10px;
+            box-shadow: gray 2px 7px 15px;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide active" style="background: red;">Slide 1</div>
+        <div class="slide" style="background: rgb(36, 24, 24);">Slide 2</div>
+        <div class="slide" style="background: rgb(31, 103, 148);">Slide 3</div>
+        <div class="slide" style="background: rgb(163, 19, 142);">Slide 4</div>
+        <div class="slide" style="background: rgb(97, 205, 25);">Slide 5</div>
+        <div class="slide" style="background: rgb(12, 130, 8);">Slide 6</div>
+
+
+        <button id="next" onclick="nextslide()">next</button>
+        <button id="back" onclick="backslide()">back</button>
+    </div>
+    <script src="./slide.js"></script>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let i =0;
+
+function nextslide(){
+    if(i == slides.length -1){
+        slides[i].classList.remove('active')
+        slides[i].classList.add('active')
+
+    }else{
+        slides[i].classList.remove('active')
+        i++;
+        slides[i].classList.add('active')
+    }
+
+}
+function backslide(){
+    if(i == 0){
+        slides[i].classList.remove('active')
+        slides[i].classList.add('active')
+
+    }else{
+        slides[i].classList.remove('active')
+        i--;
+        slides[i].classList.add('active')
+    }
+
+}
+</script>
+</body>
+</html>

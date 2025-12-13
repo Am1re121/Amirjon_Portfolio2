@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    video{
+        border-radius: 15px;
+        box-shadow: 2px 2px 15px gray;
+        height: 600px;
+        width: 800px;
+    }
+
+    #main{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <video 
+    src="photos/scre.mp4"
+    controls
+    loop
+    width="500"
+    height="300">
+</video>
+<button id="main">Back</button>
+<script>
+    const mainBtn = document.getElementById('main');
+
+    mainBtn.addEventListener('click', () => {
+        window.location.href = 'main.html';
+    });
+</script>
+</body>
+</html>

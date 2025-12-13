@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(85, 190, 85);
+    }
+
+    .slide{
+        display: none;
+        height: 300px;
+        width: 500px;
+        position: relative;
+        top: 100px;
+        left: 500px;
+        border-radius: 10px;
+        box-shadow: gray 2px 7px 15px;
+    }
+    .active{
+        display: block;
+    }
+
+    #next, #back{
+        position: relative;
+        top: 120px;
+        left: 650px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+
+    #fish{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }  
+    
+    #turtle{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #cat{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #dog{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #main{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="slider">
+        <div class="slide active"><img src="photos/fish.png" id="fish" alt="" onclick="fishstart()"></div>
+        <div class="slide"><img id="turtle" src="photos/turtle.png" alt="" onclick="turtlestart()"></div>
+        <div class="slide"><img src="photos/cat.png" id="cat" alt="" onclick="catstart()"></div>
+        <div class="slide"><img src="photos/dog.png" id="dog" alt="" onclick="dogtart()"></div>
+        
+
+        <button id="back" onclick="backSlide()">back</button>
+        <button id="next" onclick="nextSlide()">next</button>
+
+        <audio src="sounds/fish.mp3" id="fishs"></audio>
+        <audio src="sounds/turtle.mp3" id="turtles"></audio>
+        <audio src="sounds/cat.mp3" id="cats"></audio>
+        <audio src="sounds/dog.mp3" id="dogs"></audio>
+    </div>
+    <button id="main">Back</button>
+</body>
+<script>
+     const slides = document.querySelectorAll('.slide');
+    let i = 0;
+
+    function nextSlide() {
+    slides[i].classList.remove('active');
+    i++;
+    if (i === slides.length) {
+        i = 0;
+    }
+    slides[i].classList.add('active');
+}
+
+function backSlide() {
+    slides[i].classList.remove('active');
+    i--;
+    if (i < 0) {
+        i = slides.length - 1;
+    }
+    slides[i].classList.add('active');
+}
+
+function fishstart(){
+    document.getElementById("fishs").play();
+}
+function turtlestart(){
+    document.getElementById("turtles").play();
+}
+function catstart(){
+    document.getElementById("cats").play();
+}
+function dogtart(){
+    document.getElementById("dogs").play();
+}
+
+document.getElementById("main").onclick = function(){
+    window.location.href = "main.html";
+}
+</script>
+</html>
