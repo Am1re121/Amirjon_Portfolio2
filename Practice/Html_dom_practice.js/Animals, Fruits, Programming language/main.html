@@ -21,6 +21,7 @@
         position: absolute;
         left: 700px;
         top: 300px;
+        font-family: fantasy;
     }
     #fruits{
         margin: 20px;
@@ -33,6 +34,7 @@
         position: absolute;
         left: 715px;
         top: 400px;
+        font-family: fantasy;
     }
 
     #programming{
@@ -46,12 +48,45 @@
         position: absolute;
         left: 630px;
         top: 200px;
+        font-family: fantasy;
+    }
+
+    #videos{
+        margin: 20px;
+        padding: 20px;
+        background-color: lightyellow;
+        text-decoration: none;
+        font-size: 24px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+        position: absolute;
+        left: 719px;
+        top: 500px;
+        font-family: fantasy;
+    }
+
+    #js{
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        border-radius: 20px;
+        box-shadow: gray 2px 7px 15px;
     }
 </style>
 <body>
-    <a id="animals" href="animals.html">Animals</a>
+    <a id="animals" href="animals.html" >Animals</a>
     <a id="fruits" href="fruits.html">Fruits</a>
     <a id="programming" href="programming language.html">Programming Language</a>
-    <a href="scrt.html">secret</a>
+    <a href="scrt.html">.</a>
+    <a href="video.html" id="videos">Video</a>
+    <img src="photos/images.png" alt="" id="js" onclick="goto()">
+
+    <script>
+        function goto(){
+            window.location.href = "scrt.html";
+        }
+    </script>
 </body>
 </html>

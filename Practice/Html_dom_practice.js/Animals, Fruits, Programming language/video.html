@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background-color:gray;
+    }
+
+    .slide{
+        display: none;
+        height: 300px;
+        width: 500px;
+        position: relative;
+        top: 100px;
+        left: 500px;
+        border-radius: 10px;
+        box-shadow: gray 2px 7px 15px;
+    }
+    .active{
+        display: block;
+    }
+
+    #next, #back{
+        position: relative;
+        top: 120px;
+        left: 650px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+
+    #js5{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+        
+    }
+
+    #csshtml{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #tutordw{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #js{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    #backmain{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: gray 1px 3px 5px;
+        cursor: pointer;
+    }
+
+    #edit{
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+    }
+    </style>
+
+
+<div class="slider">
+        <div class="slide active"><video src="video/js5.mp4" id="js5" controls></video></div>
+        <div class="slide"><video src="video/js.mp4" id="js" controls></video></div>
+        <div class="slide"><video src="video/csshtml.mp4" id="csshtml" controls loop></video></div>
+        <div class="slide"><video src="video/dwtutor.mp4" id="tutordw" controls loop></video></div>
+        <div class="slide"><video src="video/edit.mp4" id="edit" controls></video></div>
+        
+        
+
+        <button id="back" onclick="backSlide()">back</button>
+        <button id="next" onclick="nextSlide()">next</button>
+    </div>
+
+    <button id="backmain">Back</button>
+
+    <script>
+         const slides = document.querySelectorAll('.slide');
+    let i = 0;
+
+    function nextSlide() {
+    slides[i].classList.remove('active');
+    i++;
+    if (i === slides.length) {
+        i = 0;
+        
+    }
+    slides[i].classList.add('active');
+}
+
+function backSlide() {
+    slides[i].classList.remove('active');
+    i--;
+    if (i < 0) {
+        i = slides.length - 1;
+    }
+    slides[i].classList.add('active');
+}
+
+document.getElementById('backmain').addEventListener('click', () => {
+    window.location.href = 'main.html';
+});
+    </script>
+</body>
+</html>

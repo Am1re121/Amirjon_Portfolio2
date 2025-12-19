@@ -53,7 +53,7 @@
         border-radius: 20px;
     }
 
-    #arbuz{
+    #kivi{
         height: 300px;
         width: 500px;
         position: absolute;
@@ -87,7 +87,7 @@
     <div class="slider">
         <div class="slide active"><img src="photos/pear.png" id="pear" alt="" onclick="pearstart()"></div>
         <div class="slide"><img id="apple" src="photos/apple.png" alt="" onclick="applestart()"></div>
-        <div class="slide"><img src="photos/arbuz.png" id="arbuz" alt="" onclick="arbuzstart()"></div>
+        <div class="slide"><img src="photos/kivi.png" id="kivi" alt="" onclick="kivistart()"></div>
         <div class="slide"><img src="photos/mango.png" id="mango" alt="" onclick="mangotart()"></div>
         
 
@@ -96,33 +96,30 @@
 
         <audio src="sounds/apple.mp3" id="apples"></audio>
         <audio src="sounds/mango.mp3" id="mangos"></audio>
-        <audio src="sounds/hiarbuz.mp3" id="hiarbuzs"></audio>
+        <audio src="sounds/kiwi.mp3" id="kiwis"></audio>
         <audio src="sounds/pear.mp3" id="pears"></audio>
     </div>
     <script>
         const slides = document.querySelectorAll('.slide');
-        let i =0;
+    let i = 0;
 
-    function nextSlide(){
-        if(i == slides.length -1){
-            slides[i].classList.remove('active')
-            slides[i].classList.add('active')
-        }else{
-            slides[i].classList.remove('active')
-            i++;
-            slides[i].classList.add('active')
-        }
+    function nextSlide() {
+    slides[i].classList.remove('active');
+    i++;
+    if (i === slides.length) {
+        i = 0;
     }
-    function backSlide(){
-        if(i == 0){
-            slides[i].classList.remove('active')
-            slides[i].classList.add('active')
-        }else{
-            slides[i].classList.remove('active')
-            i--;
-            slides[i].classList.add('active')
-        }
+    slides[i].classList.add('active');
+}
+
+function backSlide() {
+    slides[i].classList.remove('active');
+    i--;
+    if (i < 0) {
+        i = slides.length - 1;
     }
+    slides[i].classList.add('active');
+}
 
     function pearstart(){
        document.getElementById('pears').play();
@@ -132,8 +129,8 @@
        document.getElementById('apples').play();
     }
 
-    function arbuzstart(){
-       document.getElementById('hiarbuzs').play();
+    function kivistart(){
+       document.getElementById('kiwis').play();
     }
 
     function mangotart(){
