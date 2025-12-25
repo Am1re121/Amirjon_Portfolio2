@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background:rgb(17, 18, 18)
+    }
+    h1{
+        color: white;
+        position: absolute;
+        padding-top: 20px;
+        font-family: normal;
+        font-size: 25px;
+        left: 20px;
+    }
+
+    #ins{
+        width: 230px;
+        height: 675px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        text-align: center;
+    }
+    
+    #main{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 100px;
+    }
+
+    #search{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 150px;
+    }
+
+    #favorites{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 205px;
+    }
+
+    #reels{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 259px;
+    }
+
+    #messages{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 315px;
+    }
+
+    #notifications{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 370px;
+    }
+
+    #create{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 425px;
+    }
+
+    #profile{
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        position: absolute;
+        left: 60px;
+        top: 480px;
+    }
+
+    #home{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 20px;
+        top: 107px;
+    }
+
+    #find{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    #compas{
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        left: 20px;
+        top: 210px;
+    }
+    #videos{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        top: 269px;
+    }
+
+    #masage{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        top: 325px;
+    }
+
+    #favorite{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        top: 380px;
+    }
+
+    #add{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        top: 435px;
+    }
+
+    #random1{
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 40px;
+        left: 400px;
+        border: 3px solid rgb(255, 182, 35);
+    }
+
+    #random2{
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 40px;
+        left: 500px;
+        border: 3px solid rgb(255, 182, 35);
+    }
+</style>
+<body>
+    <div id="ins">
+        <h1>Instagram</h1>
+        <h2 id="main">Главная</h2>
+        <h2 id="search">Поисковой запрос</h2>
+        <h2 id="favorites">Интересное</h2>
+        <h2 id="reels">Reels</h2>
+        <h2 id="messages">Сообщения</h2>
+        <h2 id="notifications">Уведомления</h2>
+        <h2 id="create">Создать</h2>
+        <h2 id="profile">Профиль</h2>
+        <img src="photos/home.png" id="home" alt="">
+        <img src="photos/find.png" id="find" alt="">
+        <img src="photos/compas.png" id="compas" alt="">
+        <img src="photos/videos.png" id="videos" alt="">
+        <img src="photos/mesage.png" id="masage" alt="">
+        <img src="photos/favorite.png" id="favorite" alt="">
+        <img src="photos/add.png" id="add" alt="">
+        <img src="photos/random1.png" alt="" id="random1" onclick="story('photos/random1.png')">
+        <img src="photos/random2.png" id="random2" alt="" onclick="story('photos/random2.png')">
+    </div>
+    
+    <script>
+        function story(img){
+            window.location.href = 'story.html?imgsrc='+img;
+        }
+    </script>
+</body>
+</html>
