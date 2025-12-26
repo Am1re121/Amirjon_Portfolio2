@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #333;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+
+        }
+        .reels{
+            background: #fff;
+            margin: 0 auto;
+            width: 450px;
+            border-radius: 20px;
+            overflow: scroll;
+           
+            height: 850px;
+            /*background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;*/
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        .progress-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }
+        .progress-bar::-webkit-progress-bar{
+            background-color: rgba(235, 232, 232, 0.513);
+            border-radius: 20px;
+        }
+        .progress-bar::-webkit-progress-value{
+            background-color: rgba(210, 202, 202, 0.513);
+            border-radius: 20px;
+        }
+        .progress-bar{
+            appearance: none;
+            margin-top: 10px;
+            width: 100%;
+            height: 5px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="reels">
+            <div class="progress-container">
+                <progress value="2" max="10" class="progress-bar"></progress>
+                <progress value="0" max="10" class="progress-bar"></progress>
+                <progress value="0" max="10" class="progress-bar"></progress>
+            </div>
+           
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

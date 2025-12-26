@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reels</title>
 </head>
 <style>
     body{
@@ -24,6 +24,10 @@
         border-radius: 10px;
         border: 1px solid gray;
         text-align: center;
+
+        position: fixed;
+        top:10px;      
+        left: 20px;
     }
     
     #main{
@@ -153,40 +157,32 @@
         top: 435px;
     }
 
-    #random1{
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        top: 40px;
-        left: 400px;
-        border: 3px solid rgb(255, 182, 35);
-    }
+.reels {
+    width: 400px;
+    margin: 20px auto; 
+    position: relative; 
+}
 
-    #random2{
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        top: 40px;
-        left: 500px;
-        border: 3px solid rgb(255, 182, 35);
-    }
+.reels img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
 
-    #random3{
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        top: 40px;
-        left: 600px;
-        border: 3px solid rgb(255, 182, 35);
-    }
+.like {
+    position: absolute;
+    right: -50px; /* справа от фотки */
+    top: 500px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
 </style>
 <body>
     <div id="ins">
         <h1>Instagram</h1>
-        <h2 id="main">Главная</h2>
+        <h2 id="main" onclick="gotomain()">Главная</h2>
         <h2 id="search">Поисковой запрос</h2>
         <h2 id="favorites">Интересное</h2>
         <h2 id="reels" onclick="gotoreels()">Reels</h2>
@@ -201,19 +197,41 @@
         <img src="photos/mesage.png" id="masage" alt="">
         <img src="photos/favorite.png" id="favorite" alt="">
         <img src="photos/add.png" id="add" alt="">
-        <img src="photos/random1.png" alt="" id="random1" onclick="story('photos/random1.png')">
-        <img src="photos/random2.png" id="random2" alt="" onclick="story('photos/random2.png')">
-        <img src="photos/random3.png" id="random3" alt="" onclick="story('photos/random3.png')">
     </div>
-    
+
+    <div class="reels">
+        <img src="photos/random1.png" alt="">
+        <div class="like" onclick="like(this)">
+            ❤️<span>0</span>
+        </div>
+    </div>
+
+    <div class="reels">
+        <img src="photos/random2.png" alt="">
+        <div class="like" onclick="like(this)">
+            ❤️<span>0</span>
+        </div>
+    </div>
+
+    <div class="reels">
+        <img src="photos/random3.png" alt="">
+        <div class="like" onclick="like(this)">
+            ❤️<span>0</span>
+        </div>
+
     <script>
-        function story(img){
-            window.location.href = 'story.html?imgsrc='+img;
+        function like(element){
+            if (element.dataset.liked === "true") return;
+            let span = element.querySelector("span");
+            span.innerText = Number(span.innerText) + 1;
+            element.dataset.liked = "true";
         }
 
-        function gotoreels(){
-            window.location.href = 'reels.html';
+        function gotomain(){
+            window.location.href = 'instagram.html';
         }
     </script>
+
+
 </body>
 </html>

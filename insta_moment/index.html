@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #333;
+        }
+        .slides{
+            display: flex;
+            margin: 0 auto;
+            width: 60%;
+            overflow: scroll;
+            align-items: center;
+            height: 100vh;
+            /*background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;*/
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        .slide{
+            background: #fff;
+            max-width: 200px;
+            min-width: 180px;
+            width: 200px;
+            height: 250px;
+            border:1px solid;
+            margin-right: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            /*text-shadow: 2px 2px 4px rgba(0,0,0,0.7);*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slides">
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

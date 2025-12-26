@@ -10,6 +10,16 @@
         background:rgb(17, 18, 18)
     }
 
+    #bar{
+        width: 400px;
+        height: 15px;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
     img{
         width: 430px;
         height: 675px;
@@ -31,12 +41,29 @@
         top: 20px;
         cursor: pointer;
     }
+
 </style>
 <body>
+    <progress id="bar" value="0" max="100"></progress>
+
     <h1 id="closeon" onclick="closeon()">X</h1>
     <img id="Imgstory">
+    
 
     <script>
+        let bar = document.getElementById("bar");
+        let value = 0;
+        let time = setInterval(() => {
+            if(value<100){
+                value++;
+                bar.value = value;
+            }else{
+                clearInterval(time);
+                window.location.href = "instagram.html";
+            }  
+        },100);
+
+
         const params = new URLSearchParams(window.location.search);
         const imgSrc = params.get('imgsrc');
         document.getElementById("Imgstory").src = imgSrc;
