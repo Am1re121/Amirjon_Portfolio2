@@ -27,7 +27,7 @@
 
         position: fixed;
         top:10px;      
-        left: 20px;
+        left: 0px;
     }
     
     #main{
@@ -171,8 +171,18 @@
 
 .like {
     position: absolute;
-    right: -50px; /* справа от фотки */
+    right: -50px; 
     top: 500px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fav {
+    position: absolute;
+    left: 405px;
+    top: 540px;
     color: white;
     font-size: 25px;
     cursor: pointer;
@@ -184,7 +194,7 @@
         <h1>Instagram</h1>
         <h2 id="main" onclick="gotomain()">Главная</h2>
         <h2 id="search">Поисковой запрос</h2>
-        <h2 id="favorites">Интересное</h2>
+        <h2 id="favorites" onclick="gotofavorites()">Интересное</h2>
         <h2 id="reels" onclick="gotoreels()">Reels</h2>
         <h2 id="messages">Сообщения</h2>
         <h2 id="notifications">Уведомления</h2>
@@ -201,6 +211,7 @@
 
     <div class="reels">
         <img src="photos/random1.png" alt="">
+        <div class="fav" onclick="addFav('photos/random1.png')">⭐</div>
         <div class="like" onclick="like(this)">
             ❤️<span>0</span>
         </div>
@@ -208,6 +219,7 @@
 
     <div class="reels">
         <img src="photos/random2.png" alt="">
+        <div class="fav" onclick="addFav('photos/random2.png')">⭐</div>
         <div class="like" onclick="like(this)">
             ❤️<span>0</span>
         </div>
@@ -215,6 +227,7 @@
 
     <div class="reels">
         <img src="photos/random3.png" alt="">
+        <div class="fav" onclick="addFav('photos/random3.png')">⭐</div>
         <div class="like" onclick="like(this)">
             ❤️<span>0</span>
         </div>
@@ -229,6 +242,20 @@
 
         function gotomain(){
             window.location.href = 'instagram.html';
+        }
+
+        function addFav(img){
+        let favs = JSON.parse(localStorage.getItem("favs")) || [];
+    
+    if (!favs.includes(img)) {
+        favs.push(img);
+        localStorage.setItem("favs", JSON.stringify(favs));
+        alert("Добавлено в избранное ⭐");
+        }
+    }
+
+        function gotofavorites(){
+            window.location.href = 'favorites.html';
         }
     </script>
 

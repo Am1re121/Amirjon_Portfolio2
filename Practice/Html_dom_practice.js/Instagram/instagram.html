@@ -188,7 +188,7 @@
         <h1>Instagram</h1>
         <h2 id="main">Главная</h2>
         <h2 id="search">Поисковой запрос</h2>
-        <h2 id="favorites">Интересное</h2>
+        <h2 id="favorites" onclick="gotofav()">Интересное</h2>
         <h2 id="reels" onclick="gotoreels()">Reels</h2>
         <h2 id="messages">Сообщения</h2>
         <h2 id="notifications">Уведомления</h2>
@@ -213,6 +213,9 @@
 
         function gotoreels(){
             window.location.href = 'reels.html';
+        }
+        function gotofav(){
+            window.location.href = 'favorites.html';
         }
     </script>
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="reels">
+         <img src="Practice/Html_dom_practice.js/Instagram/photos/random1.png" onclick="gototest2('Practice/Html_dom_practice.js/Instagram/photos/random1.png')" alt="">
+         <div class="like" onclick="like(this)">❤️<span>0</span></div>
+    </div>
+
+    <div class="reels">
+            <img src="Practice/Html_dom_practice.js/Instagram/photos/random2.png" onclick="gototest2('Practice/Html_dom_practice.js/Instagram/photos/random2.png')" alt="">
+            <div class="like" onclick="like(this)">❤️<span>0</span></div>
+    </div>
+    
+    <script>
+        function gototest2(img){
+            window.location.href = 'test2.html?imgscr='+img;    
+        }
+
+        function like(element){
+            if (element.dataset.liked === "true") return;
+            let span = element.querySelector("span");
+            span.innerText = Number(span.innerText) + 1;
+            element.dataset.liked = "true";
+        }
+        
+
+    </script>
+</body>
+</html>         

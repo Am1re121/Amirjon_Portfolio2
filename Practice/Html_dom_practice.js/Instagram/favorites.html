@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black; color:white">
+
+<h2>⭐ Избранное</h2>
+<div id="list"></div>
+
+
+
+<script>
+let favs = JSON.parse(localStorage.getItem("favs")) || [];
+let list = document.getElementById("list");
+
+favs.forEach(img => {
+    let i = document.createElement("img");
+    i.src = img;
+    i.style.width = "200px";
+    i.style.margin = "10px";
+    i.addEventListener("click", function() {
+        i.remove();
+        favs = favs.filter(fav => fav !== img);
+        localStorage.setItem("favs", JSON.stringify(favs));
+    })
+    list.appendChild(i);
+});
+
+</script>
+
+</body>
+</html>

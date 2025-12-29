@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #imdstiry{
+        width: 400px;
+        height: 700px;
+        border-radius: 20px;
+        border: 2px solid gray;
+        object-fit: cover;
+    }
+</style>
+<body>
+    
+    <img id="imdstiry" alt="">
+    <script>
+        let param = new URLSearchParams(window.location.search);
+        let img = param.get('imgscr')
+        document.getElementById("imdstiry").src = img;
+        
+    </script>
+</body>
+</html>
