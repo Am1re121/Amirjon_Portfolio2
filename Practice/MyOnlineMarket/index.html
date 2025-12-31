@@ -316,7 +316,7 @@
 
     #naushniki {
         position: absolute;
-        top: 5px;
+        top: -20px;
         left: 15px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
@@ -350,7 +350,7 @@
 
     #zaradkatxt {
         position: absolute;
-        top: 5px;
+        top: -20px;
         left: 15px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
@@ -489,7 +489,7 @@
 
     #watchtxt23 {
         position: absolute;
-        top: 10px;
+        top: -20px;
         left: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
@@ -532,7 +532,7 @@
 
     #backpacktxt {
         position: absolute;
-        top: 10px;
+        top: -20px;
         left: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
@@ -554,6 +554,48 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
     }
+
+    .infotext {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        top: 1400px;
+        left: 150px;
+}
+
+    .infotext > div {
+        display: flex;
+        align-items: center;      
+        gap: 15px;               
+        width: 250px;
+        height: 90px;
+        padding: 15px;
+        background-color: rgb(224, 224, 224);
+        border-radius: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 19px;
+        color: black;
+}
+
+#vector {
+    width: 40px;
+    height: 34px;
+}
+
+#koshelek {
+    width: 40px;
+    height: 34px;
+}
+
+#tehpodderimg {
+    width: 44px;
+    height: 44px;
+}
+
+#garantiya {
+    width: 40px;
+    height: 40px;
+}
 </style>
 
 
@@ -651,6 +693,38 @@
 
     </div>
 
+    <div class="infotext">
+        <div id="dostavka24">
+            <img src="photo/Vector.png" id="vector" alt="">
+            <div>
+                Доставка по Душанбе <br> 
+            в течение 24 часов
+            </div>
+        </div>
+
+        <div id="oplata">
+            <img src="photo/koshelek.png" id="koshelek" alt="">
+            <div>
+                Удобная оплата <br> товаров
+            </div>
+        </div>
+
+        <div id="tehpodder">
+            <img src="photo/u_headphones.png" id="tehpodderimg" alt="">
+            <div>
+               Служба поддержки <br> по телефону 
+            </div>
+            
+        </div>
+
+        <div id="garant">
+            <img src="photo/fi_award.png" id="garantiya" alt="">
+            <div>
+                Гарантия качество
+            </div>
+        </div>
+
+    </div>
 
 
 
