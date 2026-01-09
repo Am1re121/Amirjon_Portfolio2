@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store Logo</title>
 <style>
+
     #poisk {
         align-items: center;
         font-size: 20px;
@@ -515,6 +516,9 @@
         position: absolute;
         top: 290px;
         left: 310px;
+        position: absolute;
+        top: 290px;
+        left: 310px;
         width: 260px;
         height: 250px;  
         background-color: rgb(161, 219, 226);
@@ -557,7 +561,7 @@
 
     .infotext {
         display: flex;
-        gap: 20px;
+        gap: 50px;
         position: absolute;
         top: 1400px;
         left: 150px;
@@ -596,7 +600,165 @@
     width: 40px;
     height: 40px;
 }
+
+@media (max-width: 768px) {
+* {
+  box-sizing: border-box; /* padding и border не увеличивают ширину */
+}
+
+body {
+  overflow-x: hidden;
+  touch-action: pan-y;   
+}
+    #katalog, #katalog2 {
+        display: none;
+    }
+
+    #findpoisk {
+        width: 400px;
+        left: 300px;
+    }
+
+    #poisk {
+        width: 350px;
+    }
+
+    #lupa {
+        left: 360px;
+    }
+    
+    #user{
+        left: 800px;
+    }
+    #vhod{
+        left: 790px;
+    }
+
+    #favorite{
+        left: 880px;
+    }
+    #izbrann{
+        left: 855px;
+    }
+    #korzina{
+        left: 950px;
+    }
+    #textkorzina{
+        left: 940px;
+    }
+    #sotrud {
+        display: none;
+    }
+    #call {
+        display: none;
+    }
+
+    #numbers {
+        display: none;
+    }
+
+    .slider {
+        width: 1000px;
+    }
+
+
+    #fitness, #headpotes, #laptop {
+        left: 554px;
+        width: 280px;
+        height: 395px;
+    }
+
+    .box1 {
+        left: 100px;
+        width: 500px;
+        height: 450px;
+    }
+    
+    .box2 {
+        left: 650px;
+        width: 500px;
+        height: 450px;
+
+    }
+
+    #naushniki, #zaradkatxt, #cheholstxt, #comptxt, #watchtxt23, #backpacktxt {
+        font-size: 28px;
+        width: 100px;
+        height: 40px;
+    }
+
+}
+
+
+.tovarscards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: absolute;
+    top: 1750px;
+    left: 150px;
+}
+
+    .tovarscards > div {
+        width: 280px;
+        height: 330px;
+        background-color: rgb(255, 254, 254);
+        border-radius: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .tovarscards img {
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+        border-radius: 15px;
+        align-self: center;
+    }
+
+    .tovarscards h1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 20px;
+        color: black;
+        
+    }
+
+    .tovarscards h2 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+        align-items: center;
+        font-size: 15px;
+        color: gray;
+    }
+
+    #populartxt {
+        position: absolute;
+        top: 1600px;
+        left: 150px;
+        font-size: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+    }
+
+    .tovarscards img.fvt {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+  .fvt.active {
+    filter: invert(39%) sepia(96%) saturate(7493%) hue-rotate(356deg) brightness(103%) contrast(107%);
+  }
 </style>
+</head>
 
 
 
@@ -604,7 +766,7 @@
 <body>
     <div style="position: absolute; width: 1520px; height: 127px;">
         <h1 id="storelogo">STORE LOGO</h1>
-        <div style="position: absolute; width: 130px; height: 45px; background-color: blue; font-size: 20px; left: 300px; top: 55px; border-radius: 10px;  color: white"></div>
+        <div id="katalog2" style="position: absolute; width: 130px; height: 45px; background-color: blue; font-size: 20px; left: 300px; top: 55px; border-radius: 10px;  color: white"></div>
         <h1 id="katalog">☰ Каталог</h1>
         <div id="findpoisk"><input type="text" id="poisk" placeholder="Название товара"> <img src="lupa.png" alt="" id="lupa"></div>
         <img id="user" src="user.png" alt="">
@@ -726,6 +888,67 @@
 
     </div>
 
+    <h1 id="populartxt">Популярные товары</h1>
+
+    <div class="tovarscards">
+        <div id="tovar1">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar1img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar2">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar2img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar3">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar3img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar4">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar4img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar5">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar5img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar6">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar6img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar7">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar7img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+        </div>
+
+        <div id="tovar8">
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar8img.png" alt="">
+            <h1>0$</h1>
+            <h2>options</h2>
+    </div>
+
+    
+
 
 
     <script>
@@ -756,6 +979,19 @@ function backslide(){
 function goSlide(index) {
     showSlide(index);
 }
+
+document.addEventListener('touchmove', function(e) {
+  if (e.touches[0].clientX) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+
+document.querySelectorAll('.tovarscards img.fvt').forEach(heart => {
+    heart.addEventListener('click', () => {
+        heart.classList.toggle('active');
+    });
+});
 </script>
 </body>
 </html>
