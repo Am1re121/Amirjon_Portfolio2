@@ -614,9 +614,14 @@ body {
         display: none;
     }
 
+
+    #storelogo{
+        left: 1px;
+    }
+
     #findpoisk {
         width: 400px;
-        left: 300px;
+        left: 170px;
     }
 
     #poisk {
@@ -628,23 +633,23 @@ body {
     }
     
     #user{
-        left: 800px;
+        left: 720px;
     }
     #vhod{
-        left: 790px;
+        left: 710px;
     }
 
     #favorite{
-        left: 880px;
+        left: 810px;
     }
     #izbrann{
-        left: 855px;
+        left: 790px;
     }
     #korzina{
-        left: 950px;
+        left: 900px;
     }
     #textkorzina{
-        left: 940px;
+        left: 890px;
     }
     #sotrud {
         display: none;
@@ -659,6 +664,7 @@ body {
 
     .slider {
         width: 1000px;
+        left: 0px;
     }
 
 
@@ -669,13 +675,14 @@ body {
     }
 
     .box1 {
-        left: 100px;
+        left: 200px;
         width: 500px;
         height: 450px;
     }
     
     .box2 {
-        left: 650px;
+        top: 1400px;
+        left: 200px;
         width: 500px;
         height: 450px;
 
@@ -687,6 +694,27 @@ body {
         height: 40px;
     }
 
+    .infotext{
+        top: 2000px;
+        left: 10px;
+        
+    }
+
+    .infotext > div{
+        width: 200px;
+        height: 100px;
+        
+    }
+    
+    .tovarscards{
+        margin-top: 800px;
+        gap: 10px;
+    }
+
+    
+    #populartxt{
+        margin-top:700px;
+    }
 }
 
 
@@ -858,7 +886,7 @@ body {
     <div class="infotext">
         <div id="dostavka24">
             <img src="photo/Vector.png" id="vector" alt="">
-            <div>
+            <div id="dostavkatxt">
                 Доставка по Душанбе <br> 
             в течение 24 часов
             </div>
@@ -952,6 +980,7 @@ body {
 
 
     <script>
+
     const slides = document.querySelectorAll('.slide');
     let dots = document.querySelectorAll('.dot');
     let i =0;
@@ -992,6 +1021,8 @@ document.querySelectorAll('.tovarscards img.fvt').forEach(heart => {
         heart.classList.toggle('active');
     });
 });
+
+
 </script>
 </body>
 </html>
