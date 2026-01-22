@@ -25,7 +25,7 @@
         position: absolute;
         left: 315px;
         top: 50px;
-        color: white;
+        color: blue;
     }
     #findpoisk {
         position: absolute;
@@ -785,6 +785,42 @@ body {
   .fvt.active {
     filter: invert(39%) sepia(96%) saturate(7493%) hue-rotate(356deg) brightness(103%) contrast(107%);
   }
+
+.domumni {
+    width: 1200px;
+    height: 300px;
+    background-color: #2A334F;
+    position: absolute;
+    top: 2600px;
+    left: 150px;
+    border-radius: 20px;
+}
+
+.domumni img {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    padding-left: 550px;
+    top: -200px;
+    
+}
+
+.domumni h1{
+    color: white;
+    font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 100px;
+    padding-top: 0px;
+}
+
+.domumni h2 {
+    color: white;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 100px;
+    position: absolute;
+    top: 100px;
+}
 </style>
 </head>
 
@@ -974,8 +1010,13 @@ body {
             <h1>0$</h1>
             <h2>options</h2>
     </div>
+    </div>
 
-    
+    <div class="domumni">
+        <img src="photo/umnidom.png" alt="">
+        <h1>Умный дом</h1>
+        <h2>для безопасности <br> и экономия</h2>
+    </div>
 
 
 
@@ -1008,13 +1049,6 @@ function backslide(){
 function goSlide(index) {
     showSlide(index);
 }
-
-document.addEventListener('touchmove', function(e) {
-  if (e.touches[0].clientX) {
-    e.preventDefault();
-  }
-}, { passive: false });
-
 
 document.querySelectorAll('.tovarscards img.fvt').forEach(heart => {
     heart.addEventListener('click', () => {
