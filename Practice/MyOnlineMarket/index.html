@@ -6,10 +6,19 @@
     <title>Store Logo</title>
 <style>
 
+    body {
+        overflow-x: hidden;
+        touch-action: pan-y; 
+        user-select: none;  
+    }
+
     #poisk {
+        border: none;
         align-items: center;
         font-size: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 1px;
+        margin-left: 1px;
     }
     #storelogo {
         position: absolute;
@@ -25,7 +34,7 @@
         position: absolute;
         left: 315px;
         top: 50px;
-        color: blue;
+        color: rgb(255, 255, 255);
     }
     #findpoisk {
         position: absolute;
@@ -60,6 +69,7 @@
         height: 30px;
         left:1170px;
         top: 55px;
+        
     }
     #vhod{
         cursor: pointer;
@@ -132,7 +142,7 @@
         height: 580px;
         overflow: hidden;
         border-radius: 20px;
-        background-color: rgb(224, 224, 224);
+        background-color: #EFEFEF;
     }
 
     .slide {
@@ -268,56 +278,56 @@
 
     .box1 {
         position: absolute;
-        top: 800px;
-        left: 135px;
-        width: 600px;
-        height: 550px;
+        top: 770px;
+        left: 100px;
+        width: 650px;
+        height: 600px;
         border-radius: 20px;
     }
 
     .headpots-box {
         position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 260px;
-        height: 250px;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 300px;
         background-color: rgb(32, 32, 32);
         border-radius: 20px;
     }
 
     .zaradka-box {
         position: absolute;
-        top: 20px;
-        left: 310px;
-        width: 260px;
-        height: 250px;
+        top: 0px;
+        left: 330px;
+        width: 300px;
+        height: 300px;
         background-color: rgb(100, 149, 237);
         border-radius: 20px;
     }
 
     .chehol-box {
         position: absolute;
-        top: 290px;
-        left: 20px;
-        width: 550px;
-        height: 250px;
+        top: 330px;
+        left: 0px;
+        width: 630px;
+        height: 300px;
         background-color: rgb(47, 79, 79);
         border-radius: 20px;
     }
 
     #head {
     position: absolute;
-    width: 300px;
-    height: 250px;
-    top: 0px;
-    left: 17px;
+    width: 360px;
+    height: 310px;
+    top: -10px;
+    left: 1px;
     transform-origin: center;
     transition: transform 0.3s ease;
     }
 
     #naushniki {
         position: absolute;
-        top: -20px;
+        top: -10px;
         left: 15px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
@@ -327,7 +337,7 @@
     #info1 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 20px;
         width: 120px;
         height: 40px;
@@ -341,9 +351,9 @@
 
     #zaradka {
         position: absolute;
-        width:486px;
-        height: 270px;
-        top: -5px;
+        width:530px;
+        height: 320px;
+        top: 0px;
         left: -60px;
         transform-origin: center;
         transition: transform 0.3s ease;
@@ -351,17 +361,17 @@
 
     #zaradkatxt {
         position: absolute;
-        top: -20px;
+        top: -10px;
         left: 15px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-size: 33px;
+        font-size: 35px;
     }
 
     #info2 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 20px;
         width: 120px;
         height: 40px;
@@ -375,20 +385,20 @@
 
     #chehol1 {
         position: absolute;
-        width:350px;
-        height: 260px;
-        top: -10px;
-        left: 240px;
+        width:390px;
+        height: 290px;
+        top: 10px;
+        left: 290px;
         transform-origin: center;
         
     }
 
     #chhol2 {
         position: absolute;
-        width:230px;
-        height: 230px;
-        top: 20px;
-        left: 200px;
+        width:250px;
+        height: 250px;
+        top: 50px;
+        left: 270px;
         transform-origin: center;
         
     }
@@ -396,16 +406,16 @@
     #cheholstxt {
         position: absolute;
         top: 10px;
-        left: 15px;
+        left: 25px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-size: 33px;
+        font-size: 35px;
     }
 
     #info3 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 20px;
         width: 120px;
         height: 40px;
@@ -419,45 +429,45 @@
 
     .box2 {
         position: absolute;
-        top: 800px;
+        top: 770px;
         left: 765px;
-        width: 600px;
-        height: 550px;
+        width: 640px;
+        height: 600px;
         border-radius: 20px;
     }
 
     .computercomplect-box {
         position: absolute;
-        top: 20px;
+        top: 0px;
         left: 20px;
-        width: 550px;
-        height: 250px;  
-        background-color: rgb(255, 65, 65);
+        width: 620px;
+        height: 300px;  
+        background-color:#F42C37;
         border-radius: 20px;
     }
 
     #comp {
         position: absolute;
-        width:247px;
-        height: 257px;
-        top: 5px;
-        left: 290px;
+        width:280px;
+        height: 290px;
+        top: 10px;
+        left: 330px;
         transform-origin: center;
     }
 
     #comptxt {
         position: absolute;
-        top: 10px;
+        top: 0px;
         left: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-size: 35px;
+        font-size: 37px;
     }
 
     #info4 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 20px;
         width: 120px;
         height: 40px;
@@ -471,36 +481,36 @@
 
     .watch-box {
         position: absolute;
-        top: 290px;
+        top: 330px;
         left: 20px;
-        width: 260px;
-        height: 250px;  
+        width: 310px;
+        height: 300px;  
         background-color: rgb(244, 164, 96);
         border-radius: 20px;
     }
 
     #watch {
         position: absolute;
-        width:130px;
-        height: 180px;
-        top: 65px;
-        left: 120px;
+        width:170px;
+        height: 220px;
+        top: 70px;
+        left: 135px;
         transform-origin: center;
     }
 
     #watchtxt23 {
         position: absolute;
-        top: -20px;
+        top: -10px;
         left: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-size: 33px;
+        font-size: 37px;
     }
 
     #info5 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 20px;
         width: 120px;
         height: 40px;
@@ -517,38 +527,38 @@
         top: 290px;
         left: 310px;
         position: absolute;
-        top: 290px;
-        left: 310px;
-        width: 260px;
-        height: 250px;  
+        top: 330px;
+        left: 350px;
+        width: 310px;
+        height: 300px;  
         background-color: rgb(161, 219, 226);
         border-radius: 20px;
     }
 
     #backpack {
         position: absolute;
-        width:250px;
-        height: 250px;
-        top: 25px;
-        left: 55px;
+        width:280px;
+        height: 280px;
+        top: 50px;
+        left: 85px;
         transform-origin: center;
     }
 
     #backpacktxt {
         position: absolute;
-        top: -20px;
-        left: 10px;
+        top: -10px;
+        left: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-size: 33px;
+        font-size: 37px;
     }
 
     #info6 {
         cursor: pointer;
         position: absolute;
-        top: 200px;
+        top: 240px;
         left: 10px;
-        width: 100px;
+        width: 120px;
         height: 40px;
         background-color: white;
         border-radius: 30px;
@@ -565,11 +575,13 @@
         position: absolute;
         top: 1400px;
         left: 150px;
+        font-weight: 500;
 }
 
     .infotext > div {
         display: flex;
-        align-items: center;      
+        align-items: center;   
+        margin-top: 50px;
         gap: 15px;               
         width: 250px;
         height: 90px;
@@ -736,6 +748,7 @@ body {
         display: flex;
         flex-direction: column;
         position: relative;
+        cursor: pointer;
     }
 
     .tovarscards img {
@@ -744,6 +757,7 @@ body {
         margin-top: 10px;
         border-radius: 15px;
         align-self: center;
+        cursor: pointer;
     }
 
     .tovarscards h1 {
@@ -761,7 +775,8 @@ body {
         margin-top: 5px;
         align-items: center;
         font-size: 15px;
-        color: gray;
+        color: #000000;
+        font-weight: 400;
     }
 
     #populartxt {
@@ -787,47 +802,483 @@ body {
   }
 
 .domumni {
-    width: 1200px;
-    height: 300px;
+    width: 1250px;
+    height: 370px;
     background-color: #2A334F;
     position: absolute;
     top: 2600px;
     left: 150px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .domumni img {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     padding-left: 550px;
     top: -200px;
+    cursor: pointer;
     
 }
 
 .domumni h1{
     color: white;
-    font-size: 60px;
+    font-size: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 100px;
-    padding-top: 0px;
+    padding-top: 20px;
 }
 
 .domumni h2 {
     color: white;
-    font-size: 30px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 100px;
     position: absolute;
-    top: 100px;
+    top: 0px;
 }
+
+.domumni h3 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 100px;
+    position: absolute;
+    top: 90px;
+    font-weight: 500;
+}
+
+.domumni h4 {
+    color: white;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 100px;
+    position: absolute;
+    top: 230px;
+    font-weight: 400;
+}
+
+#tovatnaushnikitxt {
+    position: absolute;
+    top: 3000px;
+    left: 150px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+#allseenaushniki {
+    position: absolute;
+    top: 3030px;
+    left: 450px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3E75A8;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.tovarcardsnaushniki {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: absolute;
+    top: 3150px;
+    left: 150px;
+}
+
+.tovarcardsnaushniki > div {
+    width: 280px;
+    height: 360px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+    .tovarcardsnaushniki h1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 20px;
+        color: black;
+        
+    }
+
+    .tovarcardsnaushniki h2 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+        align-items: center;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 400;
+    }
+
+    .tovarcardsnaushniki img.fvt {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .tovarcardsnaushniki img {
+        width: 200px;
+        height: 220px;
+        margin-top: 10px;
+        border-radius: 15px;
+        align-self: center;
+        cursor: pointer;
+    }
+
+    #tovavcardscheholtxt {
+    position: absolute;
+    top: 3550px;
+    left: 150px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+#allseechehol {
+    position: absolute;
+    top: 3570px;
+    left: 350px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3E75A8;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.tovarcardschehol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: absolute;
+    top: 3750px;
+    left: 150px;
+}
+
+.tovarcardschehol > div {
+    width: 280px;
+    height: 360px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+    .tovarcardschehol h1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 20px;
+        color: black;
+        
+    }
+
+    .tovarcardschehol h2 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+        align-items: center;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 400;
+    }
+
+    .tovarcardschehol img.fvt {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .tovarcardschehol img {
+        width: 200px;
+        height: 220px;
+        margin-top: 10px;
+        border-radius: 15px;
+        align-self: center;
+        cursor: pointer;
+    }
+    
+    .numberforcall {
+        background-color: #2F54C8;
+        width: 1440px;
+        height: 100px;
+        position: absolute;
+        top: 4150px;
+        left: 50px;
+    }
+
+    .numberforcall h1 {
+        color: white;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 10px;
+        padding-left: 100px;
+
+    }
+
+    .numberforcall input {
+        position: absolute;
+        top: 30px;
+        left: 750px;
+        width: 410px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        padding-left: 10px;
+        cursor: pointer;
+        background-color: #607ac9;
+        
+    }
+
+    input::placeholder {
+        color: white; 
+        opacity: 1; 
+        padding-left: 20px;
+    }
+
+    .numberforcall button {
+        position: absolute;
+        top: 30px;
+        left: 1190px;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        color: #2F54C8;
+        cursor: pointer;
+    }
+
+    .endinfo {
+        width: 1440px;
+        height: 500px;
+        background-color: #F4F7FB;
+        position: absolute;
+        top: 4250px;
+        left: 50px;
+    }
+
+    #catalogtovarov {
+        position: absolute;
+        top: 20px;
+        left: 70px;
+    }
+
+    #catalogtovarov h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #catalogtovarov h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: black;
+        padding-top: 5px;
+        padding-left: 20px;
+        color: gray;
+        font-weight: 400;
+    }
+
+
+    #pokupatelam {
+        position: absolute;
+        top: 20px;
+        left: 400px;
+    }
+
+    #pokupatelam h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #pokupatelam h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: black;
+        padding-top: 5px;
+        padding-left: 20px;
+        color: gray;
+        font-weight: 400;
+    }
+    
+    #contacts {
+        position: absolute;
+        top: 20px;
+        left: 750px;
+    }
+
+    #contacts h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #contacts h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: black;
+        padding-top: 5px;
+        padding-left: 20px;
+        color: gray;
+        font-weight: 400;
+    }
+
+    #contacts #num {
+        color: black;
+        font-weight: 500;
+    }
+
+    #endinfostorelogo {
+        position: absolute;
+        top: 370px;
+        left: 90px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #googleplay {
+        position: absolute;
+        top: 390px;
+        left: 350px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #appstore {
+        position: absolute;
+        top: 390px;
+        left: 520px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #allsite {
+        position: absolute;
+        top: 390px;
+        left: 800px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+        cursor: pointer;
+        width: 532px;
+        height: 45px;
+    }
+
+    #rekviz {
+        position: absolute;
+        top: 480px;
+        left: 90px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+        cursor: pointer;
+        width: 532px;
+        height: 45px;
+    }
+
+    #politik {
+        position: absolute;
+        top: 480px;
+        left: 200px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+        cursor: pointer;
+        width: 532px;
+        height: 45px;
+    }
+
+    #cards{
+        position: absolute;
+        top: 495px;
+        left: 900px;
+        width: 189px;
+        height: 23px;   
+    }
+
+    #chatonly{
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+        left: 1200px;
+        top: 475px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: gray;
+    }
+
+    #sitechat {
+        position: absolute;
+        top: 500px;
+        left: 1300px;
+        width: 76px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+.headpots-box, .zaradka-box, .chehol-box,
+.computercomplect-box, .watch-box, .backpack-box, .infotext > div {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+    
+.headpots-box:hover, .zaradka-box:hover, .chehol-box:hover,
+.computercomplect-box:hover, .watch-box:hover, .backpack-box:hover, .infotext > div:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+}
+    
+    #sitechat2 {
+        position: absolute;
+        top: 15px;
+        left: 400px;
+        width: 76px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    #moreinfo {
+        position: absolute;
+        top: 450px;
+        left: 130px;
+        width: 150px;
+        height: 35px;
+        background-color: #2F54C8;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
 </style>
 </head>
 
-
-
-
 <body>
+    <img src="photo/sitechat.png" id="sitechat2" alt="">
     <div style="position: absolute; width: 1520px; height: 127px;">
         <h1 id="storelogo">STORE LOGO</h1>
         <div id="katalog2" style="position: absolute; width: 130px; height: 45px; background-color: blue; font-size: 20px; left: 300px; top: 55px; border-radius: 10px;  color: white"></div>
@@ -850,6 +1301,7 @@ body {
             <h3 id="fitnesstxt1">Фитнес-браслет</h3>
             <h1 id="fitnesstxt2">Xiaomi</h1>
             <h1 id="fitnesstxt3">Mi Band 6</h1>
+            <button id="moreinfo">Подробнее</button>
         </div>
 
         <div class="slide">
@@ -958,67 +1410,180 @@ body {
         <div id="tovar1">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar1img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>549 c.</h1>
+            <h2>Wi-Fi роутер TP-Link Archer C50 <br> White</h2>
         </div>
 
         <div id="tovar2">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar2img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>349 c.</h1>
+            <h2>Внешний аккумулятор Xiaomi Fast Charge PB3 18W 10000mAh Black </h2>
         </div>
 
         <div id="tovar3">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar3img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>199 c.</h1>
+            <h2>Беспроводные наушники Redmi AirDots 2 Black</h2>
         </div>
 
         <div id="tovar4">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar4img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>49 c.</h1>
+            <h2>USB кабель 3в1 Baseus Black</h2>
         </div>
 
         <div id="tovar5">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar5img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>69 c.</h1>
+            <h2>Чехол MyPads для Xiaomi Redmi Note 10 (2021) Black (158715)</h2>
         </div>
 
         <div id="tovar6">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar6img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>99 c.</h1>
+            <h2>Чистящее средство для экранов Xiaomi Clean and Fresh Screen Clener</h2>
         </div>
 
         <div id="tovar7">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar7img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>549 c.</h1>
+            <h2>Удлинитель Xiaomi Mi Power Strip (3 розетки+3 USB)</h2>
         </div>
 
         <div id="tovar8">
             <img src="photo/fi_heart.png" class="fvt" alt="">
             <img src="photo/tovar8img.png" alt="">
-            <h1>0$</h1>
-            <h2>options</h2>
+            <h1>79 c.</h1>
+            <h2>Чехол-накладка пластиковая для Macbook Air 13'' 2018 - 2021 (A1930</h2>
     </div>
     </div>
 
     <div class="domumni">
         <img src="photo/umnidom.png" alt="">
-        <h1>Умный дом</h1>
-        <h2>для безопасности <br> и экономия</h2>
+        <h1>Perenio</h1>
+        <h2>Умный дом</h2>
+        <h3>для безопасности <br> и экономия</h3>
+        <h4>Комплект приборов безопасности для умного <br> дома Perenio PEKIT01</h4>
+    </div>
+
+    <h1 id="tovatnaushnikitxt">Наушники</h1>
+    <h2 id="allseenaushniki">Смотреть все</h2>
+
+    <div class="tovarcardsnaushniki">
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img  src="photo/tovar1naushniki.png" alt="">
+            <h1>499 c.</h1>
+            <h2>Беспроводные наушники JBL Tune 510BT, белый</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar2naushniki.png" alt="">
+            <h1>249 c.</h1>
+            <h2>Наушники Apple EarPods (3.5 мм), белый</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar3naushniki.png" alt="">
+            <h1>79 c.</h1>
+            <h2>Наушники Xiaomi Mi In-Ear Headphones Basic, черный</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar4naushniki.png" alt="">
+            <h1>749 c.</h1>
+            <h2>Беспроводные наушники VIMAI Soundex 3, белый</h2>
+        </div>
+    </div>
+
+    <h1 id="tovavcardscheholtxt">Чехлы</h1>
+    <h2 id="allseechehol">Смотреть все</h2>
+
+    <div class="tovarcardschehol">
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar1chehol.png" alt="">
+            <h1>749 c.</h1>
+            <h2>Чехол Apple iPhone 13 Clear Case MagSafe</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar2chehol.png" alt="">
+            <h1>249 c.</h1>
+            <h2>Чехол Samsung Silicone Cover S21 FE темно-серый (EF-PG990)</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar3chehol.png" alt="">
+            <h1>79 c.</h1>
+            <h2>Чехол Vipe Light Gum для Xiaomi Redmi Note 8T, Black</h2>
+        </div>
+
+        <div>
+            <img src="photo/fi_heart.png" class="fvt" alt="">
+            <img src="photo/tovar4chehol.png" alt="">
+            <h1>59 c.</h1>
+            <h2>Чехол Vipe Light Gum для Xiaomi Redmi 8A, Blue</h2>
+        </div>
+    </div>
+
+    <div class="numberforcall">
+        <h1>У ВАС ЕСТЬ ВОПРОСЫ? ОСТАВЬТЕ ВАШ НОМЕР <br> ТЕЛЕФОНА И МЫ ВАМ ПЕРЕЗВОНИМ</h1>
+        <input type="text" placeholder="Введите Ваш номер">
+        <button>Отправить</button>
     </div>
 
 
+    <div class="endinfo">
+        <div id="catalogtovarov">
+            <h1>Каталог товаров</h1>
+            <h2>Наушники</h2>
+            <h2>Зарядные устройства</h2>
+            <h2>Чехлы</h2>
+            <h2>Браслеты и часы</h2>
+            <h2>Сумки и рюкзаки</h2>
+            <h2>Компьютеры и комплектующие</h2>
+        </div>
+
+        <div id="pokupatelam">
+            <h1>Покупателям</h1>
+            <h2>Акции</h2>
+            <h2>Доставка и оплата</h2>
+            <h2>Рассрочка</h2>
+            <h2>Сотрудничество</h2>
+        </div>
+
+        <div id="contacts">
+            <h1>Контакты</h1>
+            <h2>Call-центр</h2>
+            <h2 id="num">+992 00000-00-00</h2>
+            <h2>Пн-Вс 10:00 - 20:00</h2>
+        </div>
+
+        <h1 id="endinfostorelogo">STORE LOGO</h1>
+
+        <img src="photo/googleplay.png" onclick="gotogoogleplay()" id="googleplay">
+        <img src="photo/appstore.png" onclick="gotoappstore()" id="appstore">
+        <img src="photo/allsite.png" id="allsite" alt="">
+
+        <h5 id="rekviz">Реквизиты</h5>
+        <h5 id="politik">Политика конфиденциальности</h5>
+        <h4 id="chatonly">Online чат:</h4>
+        <img id="cards" src="photo/cards.png" alt="">
+        <img id="sitechat" src="photo/sitechat.png" alt="">
+
+    </div>
 
     <script>
 
@@ -1056,6 +1621,13 @@ document.querySelectorAll('.tovarscards img.fvt').forEach(heart => {
     });
 });
 
+function gotogoogleplay() {
+    window.location.href = "https://play.google.com/store";
+}
+
+function gotoappstore() {
+    window.location.href = "https://www.apple.com/app-store/";
+}
 
 </script>
 </body>
