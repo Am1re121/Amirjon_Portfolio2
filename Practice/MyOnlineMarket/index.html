@@ -141,7 +141,7 @@
         width: 1300px;
         height: 580px;
         overflow: hidden;
-        border-radius: 20px;
+        border-radius: 25px;
         background-color: #EFEFEF;
     }
 
@@ -247,9 +247,9 @@
     }
     .dot {
         cursor: pointer;
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
+        height: 7px;
+        width: 7px;
+        margin: 0 3px;
         background-color: gray;
         border-radius: 50%;
         display: inline-block;
@@ -1301,7 +1301,7 @@ body {
             <h3 id="fitnesstxt1">Фитнес-браслет</h3>
             <h1 id="fitnesstxt2">Xiaomi</h1>
             <h1 id="fitnesstxt3">Mi Band 6</h1>
-            <button id="moreinfo">Подробнее</button>
+            <button id="moreinfo" onclick="gotowatch()">Подробнее</button>
         </div>
 
         <div class="slide">
@@ -1314,8 +1314,8 @@ body {
             <h1 id="laptoptxt1">Ноутбук</h1>
         </div>
 
-        <div onclick="nextslide()" id="next">></div>
-        <div onclick="backslide()" id="prev"><</div>
+        <div onclick="nextslide()" id="next"><img src="photo/fi_chevron-right.png" id="right" alt=""></div>
+        <div onclick="backslide()" id="prev"><img src="photo/fi_chevron-left.png" id="left" alt=""></div>
     </div>
 
     <div class="dots">
@@ -1584,7 +1584,7 @@ body {
         <img id="sitechat" src="photo/sitechat.png" alt="">
 
     </div>
-
+    
     <script>
 
     const slides = document.querySelectorAll('.slide');
@@ -1627,6 +1627,10 @@ function gotogoogleplay() {
 
 function gotoappstore() {
     window.location.href = "https://www.apple.com/app-store/";
+}
+
+function gotowatch() {
+    window.location.href = "watch.html"
 }
 
 </script>

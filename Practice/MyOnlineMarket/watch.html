@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        touch-action: pan-y; 
+        user-select: none;  
+    }
+
+    #poisk {
+        border: none;
+        align-items: center;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 1px;
+        margin-left: 1px;
+    }
+    #storelogo {
+        position: absolute;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: blue;
+        left: 115px;
+        top: 40px;
+    }
+    #katalog {
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 315px;
+        top: 50px;
+        color: rgb(255, 255, 255);
+    }
+    #findpoisk {
+        position: absolute;
+        width: 660px;
+        height: 45px;
+        background-color: blue;
+        left: 470px;
+        top: 55px;
+        border-radius: 10px;
+    }
+    #poisk {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: 10px;
+        width: 610px;
+        height: 37px;
+
+    }
+    #lupa {
+        cursor: pointer;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        left: 620px;
+        top: 3px;
+    }
+    #user {
+        cursor: pointer;
+        position:absolute;
+        width: 30px;
+        height: 30px;
+        left:1170px;
+        top: 55px;
+        
+    }
+    #vhod{
+        cursor: pointer;
+        font-size: 13px;
+        position: absolute;
+        left: 1160px;   
+        top: 80px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:gray;
+    }
+    #favorite{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left:1250px;
+        top: 55px;
+    }
+    #izbrann{
+        font-size: 13px;
+        position: absolute;
+        left: 1225px;
+        top: 80px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:gray;
+    }
+    #korzina{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left:1330px;
+        top: 55px;
+    }
+    #textkorzina{
+        font-size: 13px;
+        position: absolute;
+        left: 1320px;
+        top: 80px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:gray;
+    }
+    #sotrud{
+        cursor: pointer;
+        position: absolute;
+        font-size: 12px;
+        color:darkgray;
+        left: 120px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #call{
+        cursor: pointer;
+        position: absolute;
+        font-size: 12px;
+        color:darkgray;
+        left: 250px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #numbers{
+        position: absolute;
+        font-size: 12px;
+        color:black;
+        left: 1200px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #sitechat2 {
+        position: absolute;
+        top: 15px;
+        left: 400px;
+        width: 76px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    #watchBig {
+        position: absolute;
+        top: 200px;
+        left: 120px;
+        width: 516px;
+        height: 516px;
+    }
+
+    #txtwatch {
+        position: absolute;
+        top: 140px;
+        left: 600px;
+        font-size: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <img src="photo/sitechat.png" id="sitechat2" alt="">
+    <div style="position: absolute; width: 1520px; height: 127px;">
+        <h1 id="storelogo">STORE LOGO</h1>
+        <div id="katalog2" style="position: absolute; width: 130px; height: 45px; background-color: blue; font-size: 20px; left: 300px; top: 55px; border-radius: 10px;  color: white"></div>
+        <h1 id="katalog">☰ Каталог</h1>
+        <div id="findpoisk"><input type="text" id="poisk" placeholder="Название товара"> <img src="lupa.png" alt="" id="lupa"></div>
+        <img id="user" src="user.png" alt="">
+        <h1 id="vhod">Войти</h1>
+        <img id="favorite" src="favorite.png" alt="">
+        <h1 id="izbrann">Избранное</h1>
+        <img src="korzina.png" alt="" id="korzina">
+        <h1 id="textkorzina">Корзина</h1>
+        <h1 id="sotrud">Сотрудничество</h1>
+        <h1 id="call">Заказать звонок</h1>
+        <h1 id="numbers">+992 00000-00-00</h1>
+    </div>
+
+    <img src="photo_watch/watchrec.png" id="watchBig" alt="">
+    <h1 id="txtwatch">Умный браслет Xiaomi Mi Smart Band 6<br> NFC Global, черный</h1>
+
+</body>
+</html>
