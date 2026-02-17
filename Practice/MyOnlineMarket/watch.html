@@ -152,10 +152,113 @@
 
     #txtwatch {
         position: absolute;
-        top: 140px;
-        left: 600px;
-        font-size: 40px;
+        top: 175px;
+        left: 660px;
+        font-size: 36px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        color: rgb(44, 44, 44);
+    }
+
+    #infotxtsmall {
+        position: absolute;
+        top: 305px;
+        left: 660px;
+        display: flex;
+        gap: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        color: gray;
+        font-weight: 10;
+    }
+
+    #infotxtsmall h3 {
+        font-weight: 400;
+    }
+
+    #infotxtmedium {
+        position: absolute;
+        top: 340px;
+        left: 680px;
+        display: flex;
+        gap: 80px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        color: rgb(32, 32, 32);
+    }
+
+    #infotxtmedium h2 {
+        cursor: pointer;
+        font-weight: 400;
+    }
+
+    #dot {
+        position: absolute;
+        top: 20px;
+        left: -14px;
+        width: 8px;
+        height: 8px;
+        background-color: rgb(34, 187, 0);
+        border-radius: 50%;
+    }
+
+    #balance {
+        position: absolute;
+        top: 15px;
+        left: 120px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #share {
+        position: absolute;
+        top: 14px;
+        left: 260px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #rasrochka {
+        position: absolute;
+        top: 400px;
+        left: 660px;
+        width: 200px;
+        height: 50px;
+    }
+
+    #triangle {
+        width: 253px;
+        height: 50px;
+        background-color: #F4F7FB;
+        border-radius: 10px;
+    }
+
+    #rasrochka img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #rasrochka h3 {
+        position: absolute;
+        top: -10px;
+        left: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        color: rgb(114, 114, 114);
+        font-weight: 200;
+    }
+
+    #rasrochka h2 {
+        position: absolute;
+        top: 15px;
+        left: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
     }
 </style>
 <body>
@@ -178,6 +281,27 @@
 
     <img src="photo_watch/watchrec.png" id="watchBig" alt="">
     <h1 id="txtwatch">Умный браслет Xiaomi Mi Smart Band 6<br> NFC Global, черный</h1>
+    <div id="infotxtsmall">
+    <h3>Просмотров 350</h3>
+    <h3>Купили 193 раз</h3>
+    <h3>Артикул: 22000000000026</h3>
+    </div>
+
+    <div id="infotxtmedium">
+        <h2>В наличии</h2>
+        <h2>Сравнить</h2>
+        <h2>Поделиться</h2>
+        <div id="dot"></div>
+        <img src="photo_watch/balance.png" id="balance" alt="">
+        <img src="photo_watch/share.png" id="share" alt="">
+    </div>
+
+    <div id="rasrochka">
+        <div id="triangle"></div>
+        <img src="photo_watch/card.png" alt="">
+        <h3>Рассрочка</h3>
+        <h2>25 c. в месяц / 24 месяца</h2>
+    </div>
 
 </body>
 </html>
