@@ -94,6 +94,17 @@
             left: 900px;
             top: 300px;
         }
+
+        #Subject {
+            position: absolute;
+            top: 240px;
+            left: 50px;
+            padding: 10px;
+            font-size: 18px;
+            border: 4px solid rgb(56, 43, 243);
+            border-radius: 10px;
+            width: 200px;
+        }
     </style>
 </head>
 <body>
@@ -105,15 +116,25 @@
     <input type="text" id="studentName2" placeholder="Введите класс">
     <button id="findStudent2" onclick="findStudentByClass()">Найти по классу</button>
 
+    <select id="Subject">
+        <option value="all">Все предметы</option>
+        <option value="math">Математика</option>
+        <option value="english">Английский</option>
+        <option value="science">Наука</option>
+        <option value="history">История</option>
+
+    </select>
+
     <pre id="result"></pre>
     <pre id="resultclass"></pre>
 
     <script>
         async function findStudent() {
             const name = document.getElementById('studentName').value.trim().toLowerCase();
+            const subject = document.getElementById('Subject').value;
             if (!name) return alert("Введите имя!");
 
-            const res = await fetch(`/students/${name}`);
+            const res = await fetch(`/students/${name}?subject=${subject}`);
             if (!res.ok) {
                 document.getElementById('result').textContent = "Студент не найден";
                 return;
@@ -124,7 +145,7 @@
         }
 
         async function findStudentByClass() {
-            const className = document.getElementById('studentName2').value.trim();
+            const className = document.getElementById('studentName2').value.trim().toLowerCase();
             if (!className) return alert("Введите класс!");
 
             const res = await fetch(`/students?class=${className}`);
@@ -136,6 +157,7 @@
             const data = await res.json();
             document.getElementById('resultclass').textContent = JSON.stringify(data, null, 2);
         }
+
     </script>
 </body>
 </html>

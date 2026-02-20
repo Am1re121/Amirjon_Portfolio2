@@ -61,25 +61,44 @@ let students = [
 ]
 
 app.get('/students/:name', (req, res) => {
-   const studentName = req.params.name.trim().toLowerCase();
-    const student = students.find(s => s.name.toLowerCase() === studentName);
-    const age = student.age;
-    const clas = student.class;
-
-    if (student) {
-        return res.json({ ...student.grade, age, class: clas });
-    } else {
+    const studentName = req.params.name.trim().toLowerCase();
+    const Subject = req.query.subject;
+    const student = students.find(s => s.name.toLowerCase().trim() === studentName);
+        if (!student) {
         return res.status(404).json({ error: "Student not found" });
     }
+
+    if (Subject === "all") {
+        return res.json({ grade: student.grade });
+    } else if (Subject === "math") {
+        return res.json({ Math: student.grade.Math});
+    } else if (Subject === "english") {
+        return res.json({ English: student.grade.English});
+    } else if (Subject === "science") {
+        return  res.json({ Science: student.grade.Science});
+    } else if (Subject === "history") {
+        return res.json({ History: student.grade.History});
+    }
+
+
 });
 
-app.get('/students' , (req, res) => {
+app.get('/students', (req, res) => {
    const className = req.query.class;
-   const filteredStudents = students.filter(student => student.class === className);
+
+   if (!className) {
+       return res.status(400).json({ error: "Class not provided" });
+   }
+
+   const filteredStudents = students.filter(student =>
+       student.class.toLowerCase() === className.toLowerCase()
+   );
+
    if (filteredStudents.length === 0) {
        return res.status(404).json({ error: "Students not found" });
    }
-   res.json(filteredStudents.map(s => s.name));
+
+   return res.json(filteredStudents.map(s => ({ name: s.name }))); 
 });
 
 
