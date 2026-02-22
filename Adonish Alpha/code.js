@@ -63,7 +63,7 @@ let students = [
 app.get('/students/:name', (req, res) => {
     const studentName = req.params.name.trim().toLowerCase();
     const Subject = req.query.subject;
-    const student = students.find(s => s.name.toLowerCase().trim() === studentName);
+    const student = students.find(s => s.name.toLowerCase() === studentName.toLowerCase());
         if (!student) {
         return res.status(404).json({ error: "Student not found" });
     }

@@ -130,7 +130,7 @@
 
     <script>
         async function findStudent() {
-            const name = document.getElementById('studentName').value.trim().toLowerCase();
+            const name = document.getElementById('studentName').value.trim();
             const subject = document.getElementById('Subject').value;
             if (!name) return alert("Введите имя!");
 
@@ -141,7 +141,7 @@
             }
 
             const data = await res.json();
-            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            document.getElementById('result').textContent = data[subject];
         }
 
         async function findStudentByClass() {
