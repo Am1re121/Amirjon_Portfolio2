@@ -5,7 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 </head>
+<style>
+    body{
+        background-color: rgb(219, 252, 250);
+    }
+
+    .block-register{
+        width: 450px;
+        height: 500px;
+        background-color: rgb(241, 253, 255);
+        margin: 90px auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .block-register h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 35px;
+        color: rgb(28, 32, 153);
+        margin-left: 150px;
+        margin-top: 50px;
+    }
+
+    .block-register h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        color: rgb(28, 32, 153);
+        margin-left: 140px;
+        margin-top: -20px;
+    }
+
+    .block-register #logo {
+        width: 70px;
+        height: 40px;
+        margin-left: 80px;
+        margin-top: 0px;
+        position: absolute;
+    }
+
+    .block-register #name-put, .block-register #surname-put, .block-register #email-put, .block-register #password-put, .block-register #age-put{
+        width: 350px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(77, 77, 77);
+        padding-left: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        font-size: 15px;
+    }
+
+    .block-register #register-btn{
+        width: 300px;
+        height: 40px;
+        background-color: rgb(28, 32, 153);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-left: 70px;
+        margin-top: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .block-register #register-btn:hover{
+        background-color: rgb(28, 32, 153);
+        color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .block-register h3{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: rgb(28, 32, 153);
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+</style>
 <body>
+    <div class="block-register">
+        <img src="photo/logoAdonish.png" id="logo" alt="">
+        <h1>Adonish</h1>
+        <h2>Регистрация</h2>
+        <input type="text" id="name-put" placeholder="Имя">
+        <input type="text" id="surname-put" placeholder="Фамилия">
+        <input type="text" id="email-put" placeholder="Email">
+        <input type="text" id="password-put" placeholder="Пароль">
+        <input type="number" id="age-put" placeholder="Год рождения">
+        <button id="register-btn">Зарегистрироваться</button>
+        <h3>Есть аккаунт? <a href="login.html">Войти</a></h3>
+    </div>
     
 </body>
 </html>
