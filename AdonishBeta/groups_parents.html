@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden; 
+    }
+
+    .block-start{
+        width: 1537px;
+        height: 120px;
+        margin-top: -10px;
+        margin-left: -10px;
+        background-color: rgb(0, 8, 231);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .block-start #block-start-put{
+        width: 600px;
+        height: 45px;
+        margin-left: 400px;
+        margin-top: 35px;
+        border-radius: 5px;
+        border: 1px solid rgb(77, 77, 77);
+        padding-left: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .block-start #block-start-h1-adonish{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        color: rgb(241, 253, 255);
+        margin-left: 100px;
+        margin-top: -55px;
+    }
+
+    .block-start #user{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 1430px;
+        top: 30px;
+        
+    }
+
+    .block-start #profile{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: rgb(241, 253, 255);
+        position: absolute;
+        left: 1410px;
+        top: 60px;
+    }
+
+    .block-start #lupa{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 1020px;
+        top: 35px;
+    }
+
+    .block-start #notification{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 1300px;
+        top: 35px;
+    }
+
+    .block-start #notification-text{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: rgb(241, 253, 255);
+        position: absolute;
+        left: 1275px;
+        top: 67px;
+    }
+
+    .block-start #logoadonish{
+        width:70px;
+        height: 45px;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+
+    .block-courses{
+        width: 1537px;
+        height: 700px;
+        margin-top: 0px;
+        margin-left: -10px;
+        background-color: rgb(241, 253, 255);
+    }
+
+    .block-courses #course-javascript, .block-courses #course-python, .block-courses #course-java{
+        width: 400px;
+        height: 200px;
+        background-color: rgb(40, 45, 213);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        margin-top: 20px;
+        margin-left: 80px;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease;
+        
+    }
+
+    .block-courses #course-javascript h1, .block-courses #course-python h1, .block-courses #course-java h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45px;
+        color: rgb(241, 253, 255);
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .block-courses #course-javascript h2, .block-courses #course-python h2, .block-courses #course-java h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: rgb(241, 253, 255);
+        text-align: center;
+        margin-top: -10px;
+    }
+
+
+    .block-courses #course-python:hover, .block-courses #course-javascript:hover, .block-courses #course-java:hover{
+        background-color: rgb(40, 45, 213);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+        transform: scale(1.2);
+        
+    }
+
+    #startgroup{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 50px;
+        color: rgb(73, 71, 235);
+        margin-left: 650px;
+        margin-top: 30px;
+    }
+
+</style>
+<body>
+    <div class="block-start">
+        <input type="text" id="block-start-put" placeholder="Search for groups...">
+        <img src="photo/magnifier.png" id="lupa" alt="">
+        <h1 id="block-start-h1-adonish">Adonish</h1>
+        <img src="photo/logoAdonish.png" id="logoadonish" alt="">
+        <img src="photo/user-icon.png" id="user" alt="">
+        <h2 id="profile">Профиль</h2>
+        <img src="photo/notification.png" id="notification" alt="">
+        <h2 id="notification-text">Уведомление</h2>
+    </div>
+
+    <h1 id="startgroup">Groups</h1>
+
+    <div class="block-courses">
+        <div id="course-javascript">
+            <h1 id="jscoursetext">JavaScript</h1>
+            <h2 id="jscourseteacher">Rizoev Mansur</h2>
+        </div>
+
+        <div id="course-python">
+            <h1 id="pythoncoursetext">Python</h1>
+            <h2 id="pythoncourseteacher">Rozikov Parviz</h2>
+        </div>
+
+        <div id="course-java">
+            <h1 id="javacoursetext">Java</h1>
+            <h2 id="javacourseteacher">James Gosling</h2>
+        </div>
+</body>
+</html>
