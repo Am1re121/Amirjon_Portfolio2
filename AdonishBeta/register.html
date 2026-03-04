@@ -83,6 +83,31 @@
         margin-top: 20px;
     }
 
+    #role {
+        width: 150px;
+        height: 30px;
+        margin-left: 350px;
+        margin-top: -0px;
+        border-radius: 5px;
+        border: 1px solid rgb(77, 77, 77);
+        padding-left: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        font-size: 15px;
+        position: absolute;
+        top: 500px;
+
+    }
+
+    #error-put {
+        color: red;
+        margin-left: 520px;
+        margin-top: 20px;
+        position: absolute;
+        top: 570px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+
 </style>
 <body>
     <div class="block-register">
@@ -94,9 +119,44 @@
         <input type="text" id="email-put" placeholder="Email">
         <input type="text" id="password-put" placeholder="Пароль">
         <input type="number" id="age-put" placeholder="Год рождения">
-        <button id="register-btn">Зарегистрироваться</button>
+        <button id="register-btn" onclick="register()">Зарегистрироваться</button>
         <h3>Есть аккаунт? <a href="login.html">Войти</a></h3>
     </div>
     
+    <select id="role">
+    <option value="role2">Выберите роль</option>
+    <option value="student">Студент</option>
+    <option value="parent">Родитель</option>
+    <option value="teacher">Учитель</option>
+    </select>
+
+    <h1 id="error-put"></h1>
+
+    <script>
+        function register() {
+            const name = document.getElementById('name-put').value;
+            const surname = document.getElementById('surname-put').value;
+            const email = document.getElementById('email-put').value;
+            const password = document.getElementById('password-put').value;
+            const age = document.getElementById('age-put').value;
+            const role = document.getElementById('role').value;
+
+            if (!name || !surname || !email || !password || !age || role === "role2") {
+                setTimeout(() => {
+                    document.getElementById('error-put').textContent = "";
+                }, 3000);
+                document.getElementById('error-put').textContent = "Пожалуйста, заполните все поля и выберите роль!";
+            } else {
+                if (role === "parent") {
+                    window.location.href = "groups_parents.html";
+                } else if (role === "student") {
+                    window.location.href = "students_class.html";
+                } else if (role === "teacher") {
+                    window.location.href = "teacher_dashboard.html";
+                }
+            }
+            
+        }
+    </script>
 </body>
 </html>
