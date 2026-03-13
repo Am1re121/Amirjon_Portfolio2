@@ -147,16 +147,20 @@
                 }, 3000);
                 document.getElementById('error-put').textContent = "Пожалуйста, заполните все поля и выберите роль!";
             } else {
-                if (role === "parent") {
-                    window.location.href = "groups_parents.html";
-                } else if (role === "student") {
-                    window.location.href = "students_class.html";
-                } else if (role === "teacher") {
-                    window.location.href = "teacher_dashboard.html";
+                if (role === "parent" || role === "student" || role === "teacher") {
+                    window.location.href = "groups.html";
+                    localStorage.setItem('role', document.getElementById('role').value);
+                } else {
+                    setTimeout(() => {
+                        document.getElementById('error-put').textContent = "";
+                    }, 3000);
+                    document.getElementById('error-put').textContent = "Пожалуйста, выберите роль!";
                 }
             }
             
         }
+
+        
     </script>
 </body>
 </html>

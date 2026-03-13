@@ -146,6 +146,25 @@
         text-align: center;
         margin-top: -10px;
     }
+
+    
+
+    .creat-group #create-group-btn{
+        width: 200px;
+        height: 50px;
+        background-color: rgb(28, 32, 153);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin-left: 1250px;
+        margin-top: 0px;
+        position: absolute;
+        top: 150px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
 </style>
 <body>
     <div class="block-start">
@@ -157,7 +176,7 @@
         <img src="photo/notification.png" id="notification" alt="">
     </div>
 
-    <h1 id="startgroup">Groups</h1>
+    <h1 id="startgroup">Группы</h1>
 
     <div class="block-courses">
         <div id="course-javascript">
@@ -184,5 +203,22 @@
             <h3 id="time">16:00 - 17:30</h3>
         </div>
     </div>
+
+
+    <div class="creat-group"> 
+        <button id="create-group-btn">Создать группу</button>
+    </div>
+
+
+    <script>
+        let role = localStorage.getItem('role');
+        if (role) {
+            if (role === "teacher") {
+                document.getElementById('create-group-btn').style.display = 'block';
+            } else{
+                document.getElementById('create-group-btn').style.display = 'none';
+        }
+    }
+    </script>
 </body>
 </html>
