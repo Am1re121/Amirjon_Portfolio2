@@ -113,49 +113,77 @@
 
     .teacher-bar-group #teacher-inf{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 25px;
         color: rgb(0, 0, 0);
         position: absolute;
-        left: 310px;
-        top: 370px;
+        left: 300px;
+        top: 360px;
     }
 
-    .student-bar-group{
+    .students-block{
+        width: 900px;
+        height: 400px;
+        margin-top: 90px;
+        margin-left: 280px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .students-block #student-group1, .students-block #student-group2, .students-block #student-group3, .students-block #student-group4{
         width: 900px;
         height: 80px;
-        margin-top: 100px;
-        margin-left: 280px;
         background-color: rgba(175, 175, 175, 0.343);
-        border-radius: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: 0px;
     }
 
-    .student-bar-group #student-icon-user{
+    .students-block #student-group1 #student-icon-user1, .students-block #student-group2 #student-icon-user2, .students-block #student-group3 #student-icon-user3, .students-block #student-group4 #student-icon-user4{
         width: 50px;
         height: 50px;
-        position: absolute;
-        left: 310px;
-        top: 615px;
+        margin-left: 20px;
     }
 
-    .student-bar-group #student-name-bar{
+    .students-block #student-group1 #student-name-bar1, .students-block #student-group2 #student-name-bar2, .students-block #student-group3 #student-name-bar3, .students-block #student-group4 #student-name-bar4{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         color: rgb(0, 8, 231);
-        position: absolute;
-        left: 390px;
-        top: 590px;
     }
 
-    .student-bar-group #student-inf{
+    #students-h3{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 25px;
         color: rgb(0, 0, 0);
         position: absolute;
-        left: 310px;
-        top: 550px;
+        left: 290px;
+        top: 510px;
     }
-    
 
+    #backk{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 150px;
+        cursor: pointer;
+    }
+
+    #backk img{
+        width: 30px;
+        height: 30px;
+    }
 </style>
 <body>
     <div class="block-start">
@@ -170,17 +198,39 @@
     <div class="teacher-bar-group">
         <img src="photo/user.png" id="teacher-icon-user" alt="">
         <h2 id="teacher-name-bar">Teacher Name</h2>
-        <h3 id="teacher-inf">Учитель-(ница)</h3>
+        <h3 id="teacher-inf">Учитель</h3>
     </div>
 
-   
-        <div class="student-bar-group">
-            <img src="photo/Univer-icon.png" id="student-icon-user" alt="">
-            <h2 id="student-name-bar">Student Name</h2>
-            <h3 id="student-inf">Студент-(ка)</h3>
+    <h3 id="students-h3">Студенты</h3>
+
+    <div class="students-block">
+        <div id="student-group1">
+            <img src="photo/Univer-icon.png" id="student-icon-user1" alt="">
+            <h2 id="student-name-bar1">Student Name 1</h2>
         </div>
+
+        <div id="student-group2">
+            <img src="photo/Univer-icon.png" id="student-icon-user2" alt="">
+            <h2 id="student-name-bar2">Student Name 2</h2>
+        </div>
+
+        <div id="student-group3">
+            <img src="photo/Univer-icon.png" id="student-icon-user3" alt="">
+            <h2 id="student-name-bar3">Student Name 3</h2>
+        </div>
+
+        <div id="student-group4">
+            <img src="photo/Univer-icon.png" id="student-icon-user4" alt="">
+            <h2 id="student-name-bar4">Student Name 4</h2>
+        </div>
+    </div>
+
+    <div id="backk" onclick="backtogroups()"><img src="photo/free-icon-back-130882.png" alt=""></div>
+
     <script>
-        
+        function backtogroups(){
+            window.location.href = "groups.html";
+        }
     </script>
 </body>
 </html>

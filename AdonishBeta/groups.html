@@ -217,25 +217,25 @@
     <h1 id="startgroup">Группы</h1>
 
     <div class="block-courses">
-        <div id="course-javascript">
+        <div id="course-javascript" onclick="gotocourse()">
             <h1 id="jscoursetext">JavaScript</h1>
             <h2 id="jscourseteacher">Rizoev Mansur</h2>
             <h3 id="time">14:00 - 15:30</h3>
         </div>
 
-        <div id="course-python">
+        <div id="course-python" onclick="gotocourse()">
             <h1 id="pythoncoursetext">Python</h1>
             <h2 id="pythoncourseteacher">Rozikov Parviz</h2>
             <h3 id="time">12:00 - 13:30</h3>
         </div>
 
-        <div id="course-java">
+        <div id="course-java" onclick="gotocourse()">
             <h1 id="javacoursetext">Java</h1>
             <h2 id="javacourseteacher">James Gosling</h2>
             <h3 id="time">10:00 - 11:30</h3>
         </div>
 
-        <div id="course-c">
+        <div id="course-c" onclick="gotocourse()">
             <h1 id="cppcoursetext">C++</h1>
             <h2 id="cppcourseteacher">Bjarne Stroustrup</h2>
             <h3 id="time">16:00 - 17:30</h3>
@@ -265,6 +265,9 @@
             }
         }
 
+        function gotocourse(){
+            window.location.href = "infogroups.html";
+        }
         
     
     </script>
