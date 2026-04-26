@@ -184,6 +184,21 @@
         width: 30px;
         height: 30px;
     }
+
+    #signup-btn{
+        width: 200px;
+        height: 50px;
+        background-color: rgb(0, 8, 231);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        position: absolute;
+        left: 625px;
+        top: 350px;
+        cursor: pointer;
+    }
 </style>
 <body>
     <div class="block-start">
@@ -195,7 +210,9 @@
     </div>
     <h1 id="Timelessongroup">Урок начинается в <br> <span id="starttimelessongroup">00:00</span></h1>
 
-    <div class="teacher-bar-group">
+    <button id="signup-btn">Записаться</button>
+
+    <div class="teacher-bar-group" onclick="gotoinfostudents()">
         <img src="photo/user.png" id="teacher-icon-user" alt="">
         <h2 id="teacher-name-bar">Teacher Name</h2>
         <h3 id="teacher-inf">Учитель</h3>
@@ -204,22 +221,22 @@
     <h3 id="students-h3">Студенты</h3>
 
     <div class="students-block">
-        <div id="student-group1">
+        <div id="student-group1" onclick="gotoinfostudents()">
             <img src="photo/Univer-icon.png" id="student-icon-user1" alt="">
             <h2 id="student-name-bar1">Student Name 1</h2>
         </div>
 
-        <div id="student-group2">
+        <div id="student-group2" onclick="gotoinfostudents()">
             <img src="photo/Univer-icon.png" id="student-icon-user2" alt="">
             <h2 id="student-name-bar2">Student Name 2</h2>
         </div>
 
-        <div id="student-group3">
+        <div id="student-group3" onclick="gotoinfostudents()">
             <img src="photo/Univer-icon.png" id="student-icon-user3" alt="">
             <h2 id="student-name-bar3">Student Name 3</h2>
         </div>
 
-        <div id="student-group4">
+        <div id="student-group4" onclick="gotoinfostudents()">
             <img src="photo/Univer-icon.png" id="student-icon-user4" alt="">
             <h2 id="student-name-bar4">Student Name 4</h2>
         </div>
@@ -230,6 +247,10 @@
     <script>
         function backtogroups(){
             window.location.href = "groups.html";
+        }
+
+        function gotoinfostudents(){
+            window.location.href = "studentinfo.html";
         }
     </script>
 </body>

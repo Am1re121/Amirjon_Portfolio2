@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Create Group</title>
 </head>
 <style>
     .block-start{
@@ -58,80 +58,87 @@
         top: 30px;
     }
 
-    #userphoto{
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        margin-left: 30px;
-        margin-top: 50px;
+    #creategrouptxt{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45px;
+        color: rgb(241, 253, 255);
+        position: absolute;
+        left: 610px;
+        top: 0px;
     }
 
-    .box-userphoto{
-        width: 320px;
-        height: 320px;
-        background-color: rgba(89, 89, 89, 0.383);
-        margin-left: 20px;
-        margin-top: 30px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    .box-info-profile{
+    .block-create-group{
         width: 600px;
-        height: 450px;
+        height: 600px;
         background-color: rgb(241, 253, 255);
-        margin-left: 400px;
-        margin-top: -315px;
+        margin: 90px auto;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        padding: 20px;
     }
 
-    .box-info-profile h1{
+    .block-create-group h2{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 25px;
         color: rgb(28, 32, 153);
-        margin-top: 20px;
+        margin-left: 60px;
+        margin-top: 10px;
     }
 
-    .box-info-profile h2{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
-        color: rgb(28, 32, 153);
-        margin-top: -10px;
+    .block-create-group #namegroup, .block-create-group #lesson, .block-create-group #time, .block-create-group #description{
+        width: 350px;
+        height: 40px;
+        margin-left: 60px;
+        margin-top: 0px;
+        border-radius: 5px;
+        border: 1px solid rgb(77, 77, 77);
+        padding-left: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        font-size: 15px;
     }
 
-    #change-photo-btn{
-        width: 150px;
+    .block-create-group #create-btn{
+        width: 300px;
         height: 40px;
         background-color: rgb(28, 32, 153);
         color: white;
         border: none;
         border-radius: 5px;
-        margin-left: 30px;
-        margin-top: 20px;
-        font-size: 15px;
+        margin-left: 140px;
+        margin-top: 30px;
+        font-size: 20px;
         cursor: pointer;
-        position: absolute;
-        top: 480px;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     }   
 
-    #change-photo-btn:hover{
+    .block-create-group #create-btn:hover{
         background-color: rgb(28, 32, 153);
-        color: white;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+    }
+
+
+    .block-create-group #student-count{
+        width: 350px;
+        height: 40px;
+        margin-left: 60px;
+        margin-top: 0px;
+        border-radius: 5px;
+        border: 1px solid rgb(77, 77, 77);
+        padding-left: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        font-size: 15px;
     }
 
     #backtogroups{
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         position: absolute;
-        left: 1450px;
+        left: 40px;
         top: 150px;
         cursor: pointer;
     }
-
+    
 </style>
 <body>
     <div class="block-start">
@@ -139,30 +146,27 @@
         <img src="photo/logoAdonish.png" id="logoadonish" alt="">
         <img src="photo/user-icon.png" id="user" alt="">
         <img src="photo/notification.png" id="notification" alt="">
+        <h1 id="creategrouptxt">Создать группу</h1>
     </div>
 
-    <div class="box-userphoto">
-    <img src="photo/user.png" id="userphoto" alt="">
+    <div class="block-create-group">
+        <h2>Название группы</h2>
+        <input type="text" id="namegroup" placeholder="Введите название группы">
+        <h2>Урок</h2>
+        <input type="text" id="lesson" placeholder="Введите урок">
+        <h2>Время</h2>
+        <input type="text" id="time" placeholder="Введите время">
+        <h2>Описание</h2>
+        <input type="text" id="description" placeholder="Введите описание">
+        <h2>Количество учеников</h2>
+        <input type="number" id="student-count" placeholder="Введите количество учеников">
+        <button id="create-btn">Создать группу</button>
     </div>
 
-    <div class="box-info-profile">
-        <h1>Имя Фамилия</h1>
-        <h2 id="name-real-prifile">Name and firstname</h2>
-        <h1>Email</h1>
-        <h2 id="email-real-profile">email@example.com</h2>
-        <h1>Телефон</h1>
-        <h2 id="phone-real-profile">+992 000-000-00-00</h2>
-        <h1>Оценка</h1>
-        <h2 id="grade-real-profile">0</h2>
-        <h1>Роль</h1>
-        <h2 id="role-real-profile">Not role</h2>
-    </div>
-
-    <button id="change-photo-btn">Сменить фото</button>
     <img src="photo/free-icon-back-130882.png" id="backtogroups" alt="" onclick="backtogroups()">
 
     <script>
-        function backtogroups(){
+        function backtogroups() {
             window.location.href = "groups.html";
         }
     </script>
